@@ -1,0 +1,25 @@
+.request-item {
+    a {
+        border-color: var(--color-primary);
+        text-decoration: none;
+        color: black;
+
+        .company-name, .website {
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        &:after {
+            content: '→';
+            display: block;
+            text-align: right;
+            margin-top: 1rem;
+            opacity: .6;
+            transition: opacity 200ms ease-in;
+        }
+
+        &:hover:after {
+            opacity: 1;
+        }
+    }
+}

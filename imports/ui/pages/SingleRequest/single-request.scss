@@ -1,0 +1,9 @@
+.single-request {
+    display: grid;
+    grid-template-columns: 66.66% 33.33%;
+
+    .description {
+        white-space: pre-wrap;
+        word-wrap: break-word;
+    }
+}

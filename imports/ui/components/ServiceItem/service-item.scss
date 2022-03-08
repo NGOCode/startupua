@@ -1,0 +1,37 @@
+.service-item, .request-item {
+    list-style: none;
+
+    a {
+        display: block;
+        padding: 2rem;
+        border-width: 5px;
+        border-style: solid;
+        border-radius: 10px;
+        text-decoration: none;
+        color: black;
+    }
+}
+
+.service-item {
+    a {
+        border-color: var(--color-alt);
+
+        .company-name, .website {
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        &:after {
+            content: '→';
+            display: block;
+            text-align: right;
+            margin-top: 1rem;
+            opacity: .6;
+            transition: opacity 200ms ease-in;
+        }
+
+        &:hover:after {
+            opacity: 1;
+        }
+    }
+}

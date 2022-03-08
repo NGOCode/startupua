@@ -38,7 +38,6 @@ export const ContactForm = props => {
                         </label>
                         <textarea
                             id="comment"
-                            cols="45"
                             rows="5"
                             {...register('comment')}
                         />

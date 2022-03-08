@@ -22,7 +22,7 @@ export const MyServicesList = () => {
                     Loading
                 </span>
                 :
-                <ul className="my-services-list">
+                <ul className="cards-list my-services-list">
                     {services.map(service => (
                         <ServiceItem
                             key={service._id}

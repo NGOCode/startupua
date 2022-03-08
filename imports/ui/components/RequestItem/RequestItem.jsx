@@ -18,9 +18,9 @@ export const RequestItem = props => {
                 <p>
                     {props.description}
                 </p>
-                <span className="website">
+                <p className="website">
                     {props.website}
-                </span>
+                </p>
                 <OpenGraphReader url={props.website}/>
             </Link>
         </li>

@@ -49,3 +49,19 @@ new ValidatedMethod({
         }});
     }
 });
+
+new ValidatedMethod({
+    name: 'service.remove',
+    validate: new SimpleSchema({
+        serviceId: { type: String }
+    }).validator({ clean: true }),
+    run({ serviceId }) {
+        const service = ServicesCollection.findOne({ _id: serviceId });
+        
+        if (!this.userId || service.owner !== this.userId) {
+            throw new Meteor.Error('Not authorized.');
+        }
+        
+        return ServicesCollection.remove({ _id: serviceId });
+    }
+});

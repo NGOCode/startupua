@@ -1,0 +1,63 @@
+
+html, body {
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+figure {
+    margin: 0;
+}
+
+a.button, button {
+    display: inline-block;
+    padding: .5rem 1rem;
+    border: 5px solid var(--color-primary);
+    border-radius: 5px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--color-primary);
+    cursor: pointer;
+
+    &:hover {
+        background: rgba(var(--color-primary-ref), 0.9);
+        color: white;
+    }
+
+    &.btn-alt {
+        border-color: var(--color-alt);
+        color: black;
+
+        &:hover {
+            background: rgba(var(--color-alt-ref), 0.6);
+        }
+    }
+}
+
+.btn-discreet {
+    font-size: 1rem;
+    border-color: grey;
+    color: grey;
+}
+
+.page {
+    padding-bottom: 2rem;
+}
+
+.wrapped-content {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.og-reader.error {
+    display: none;
+}
+
+@media only screen and (min-device-width: 812px) {
+    .wrapped-content {
+        margin: auto;
+        max-width: 980px;
+    }
+}

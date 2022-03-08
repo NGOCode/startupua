@@ -29,37 +29,43 @@ export const SingleRequest = () => {
         loading ?
             <span>loading</span>
             :
-            <div className="wrapped-content single-request">
-                <div className="request-content">
-                    <h5>
-                        {request.type}
-                    </h5>
-                    <h1>
-                        {request.title}
-                    </h1>
-                    <p className="description">
-                        {request.description}
-                    </p>
-                </div>
-                <div className="request-metadata">
-                    <OpenGraphReader url={request.website} />
-                    <h4>
-                        {request.company}
-                    </h4>
-                    <ul>
-                        <li>
-                            {request.website}
-                        </li>
-                        <li>
-                            {request.country}
-                        </li>
-                    </ul>
+            <div className="single-request">
+                <div className="wrapped-content">
+                    <div className="request-content">
+                        <h5>
+                            {request.type}
+                        </h5>
+                        <h1>
+                            {request.title}
+                        </h1>
+                        <p className="description">
+                            {request.description}
+                        </p>
+                    </div>
+                    <div className="request-metadata">
+                        <OpenGraphReader url={request.website} />
+                        <h4>
+                            {request.company}
+                        </h4>
+                        <ul>
+                            <li>
+                                {request.website}
+                            </li>
+                            <li>
+                                {request.country}
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 <div className="actions">
-                    <h3>
-                        Offer help
-                    </h3>
-                    <ContactForm onSubmit={onSubmit} />
+                    <div className="wrapped-content">
+                        <div>
+                            <h3>
+                                Offer help
+                            </h3>
+                            <ContactForm onSubmit={onSubmit} />
+                        </div>
+                    </div>
                 </div>
             </div>
     )

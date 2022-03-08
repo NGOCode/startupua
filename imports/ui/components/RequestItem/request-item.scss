@@ -9,6 +9,12 @@
             font-weight: 600;
         }
 
+        .og-reader {
+            img {
+                max-width: 100%;
+            }
+        }
+
         &:after {
             content: '→';
             display: block;

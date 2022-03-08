@@ -6,14 +6,6 @@
         }
     }
 
-    .my-services-list, .all-requests-list {
-        padding: 0;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-column-gap: 1rem;
-        grid-row-gap: 1rem;
-    }
-
     .all-requests-container {
         background: rgba(var(--color-primary-ref), 0.05);
         padding: 2rem 0;

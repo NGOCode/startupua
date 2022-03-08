@@ -9,7 +9,7 @@ export const RequestForm = props => {
         <form className="wrapped-content form add-request-form" onSubmit={handleSubmit(props.onSubmit)}>
             <fieldset>
                 <legend>
-                    I need help relocating
+                    I need help with my startup
                 </legend>
                 <ul>
                     <li>

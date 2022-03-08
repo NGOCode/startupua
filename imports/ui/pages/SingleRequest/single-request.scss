@@ -1,9 +1,34 @@
-.single-request {
-    display: grid;
-    grid-template-columns: 66.66% 33.33%;
 
-    .description {
-        white-space: pre-wrap;
-        word-wrap: break-word;
+.single-request {
+    .og-reader {
+        img {
+            max-width: 100%;
+        }
+    }
+}
+
+@media only screen and (min-device-width: 812px) {
+    .single-request {
+
+        & > .wrapped-content {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            grid-column-gap: 2rem;
+        }
+
+        .description {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .actions {
+            background: rgba(var(--color-alt-ref), .09);
+
+            .wrapped-content {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                padding: 2rem;
+            }
+        }
     }
 }

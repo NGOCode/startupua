@@ -1,0 +1,48 @@
+form {
+    overflow: hidden;
+
+    fieldset {
+        border: 0;
+        padding: 0;
+    }
+
+    legend {
+        font-size: 24px;
+        font-weight: 700;
+        margin: 19.92px 0;
+        padding: 0;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+            margin-bottom: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+
+            label {
+                flex: 1 1 100%;
+                font-size: .8rem;
+                text-transform: uppercase;
+                font-weight: 600;
+                margin-bottom: .5rem;
+            }
+
+            input[type=text], textarea, select {
+                width: 100%;
+                flex: 0 1 auto;
+                border: 2px solid rgba(var(--color-primary-ref), .5);
+                text-indent: 2px;
+                padding: 5px;
+                font-size: 1.1rem;
+                border-radius: 5px;
+            }
+        }
+    }
+
+    textarea {
+        width: calc(100% - 10px);
+    }
+}

@@ -23,7 +23,7 @@ export const MyRequestsList = () => {
                     Loading
                 </span>
                 :
-                <ul className="my-requests-list">
+                <ul className="cards-list my-requests-list">
                     {requests.map(request => (
                         <RequestItem
                             key={request._id}

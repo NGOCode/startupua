@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import './home.scss';
+
 export const Home = () => {
     return (
         <div className="page-content home">
@@ -22,7 +24,7 @@ export const Home = () => {
                 <ul className="wrapped-content actions">
                     <li>
                         <Link to="/business" className="button">
-                            I want to relocate
+                            I have a request
                         </Link>
                     </li>
                     <li>

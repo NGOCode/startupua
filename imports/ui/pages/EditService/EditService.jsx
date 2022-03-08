@@ -7,6 +7,8 @@ import { ServicesCollection } from '/imports/domains/services/collection';
 
 import { ServiceForm } from '../../components/ServiceForm/ServiceForm';
 
+import './edit-service.scss';
+
 export const EditService = () => {
     const navigate = useNavigate();
     const params = useParams();
@@ -30,16 +32,30 @@ export const EditService = () => {
         };
     });
     
+    const deleteService = () => {
+        Meteor.call('service.remove', {
+            serviceId: params.serviceId
+        });
+        navigate('/service-provider');
+    };
+    
     return (
-        <div className="edit-service">
-            {loading ?
-                <span>loading</span>
-                :
+        loading ?
+            <span>loading</span>
+            :
+            <div className="edit-service">
                 <ServiceForm
                     onSubmit={onSubmit}
                     {...service}
                 />
-            }
-        </div>
+                <div className="actions">
+                    <button
+                        className="btn-discreet"
+                        onClick={deleteService}
+                    >
+                        Delete service
+                    </button>
+                </div>
+            </div>
     );
 };

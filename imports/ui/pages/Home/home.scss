@@ -11,6 +11,10 @@
         .banner-image {
             display: none;
         }
+
+        .banner-description {
+            text-align: center;
+        }
     }
 
     .choose-profile {
@@ -29,7 +33,6 @@
 
             .button {
                 display: inline-block;
-                border: 5px solid var(--color-primary);
                 font-size: 1.4rem;
                 font-weight: 600;
             }
@@ -41,6 +44,10 @@
     .home {
         .banner {
             justify-content: space-between;
+
+            .banner-content {
+                margin-right: 2rem;
+            }
 
             h1 {
                 flex: 0 0 60%;
@@ -55,6 +62,27 @@
 
                 img {
                     max-height: 100%;
+                }
+            }
+
+            .banner-description {
+                text-align: left;
+                font-size: 1.8rem;
+                font-weight: 100;
+            }
+        }
+
+        .choose-profile {
+            .actions {
+                justify-content: center;
+
+                li {
+                    flex: 0 0 auto;
+                    margin-right: 2rem;
+
+                    &:last-child {
+                        margin: 0;
+                    }
                 }
             }
         }

@@ -12,7 +12,7 @@ export const Header = () => {
                         src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Ukraine.svg/2560px-Flag_of_Ukraine.svg.png"/>
                 </figure>
                 <span className="brand-name">
-                    Relocate Biz
+                    Startup UA Help board
                 </span>
             </Link>
             <nav className="main-nav">

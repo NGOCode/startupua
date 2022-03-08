@@ -9,10 +9,11 @@ export const Home = () => {
             <div className="wrapped-content banner">
                 <div className="banner-content">
                     <h1>
-                        Find a place for your business in the EU
+                        Get help from other EU founders
                     </h1>
                     <p className="banner-description">
-                    
+                        Ask other startup founders in the EU for advice or help regarding.
+                        Leverage a network of people willing to help out so you can keep you project afloat in these troubled times.
                     </p>
                 </div>
                 <figure className="banner-image">
@@ -28,7 +29,7 @@ export const Home = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link to="/service-provider" className="button">
+                        <Link to="/service-provider" className="button btn-alt">
                             I can offer help
                         </Link>
                     </li>

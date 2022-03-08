@@ -1,5 +1,5 @@
 node_modules/
-.meteor/
+.meteor/local
 .idea/
 settings-galaxy.json
 settings.json

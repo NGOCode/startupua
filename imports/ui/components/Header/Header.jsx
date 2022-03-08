@@ -24,12 +24,12 @@ export const Header = () => {
                     </li>
                     <li>
                         <Link to="/service-provider">
-                            I help relocate
+                            Offer help
                         </Link>
                     </li>
                     <li>
                         <Link to="/business">
-                            I need relocation
+                            Ask for help
                         </Link>
                     </li>
                 </ul>

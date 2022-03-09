@@ -10,37 +10,17 @@ export const ContactForm = props => {
             <fieldset>
                 <ul>
                     <li>
-                        <label htmlFor="name">
-                            Your name
-                        </label>
-                        <input
-                            type="text"
-                            id="name"
-                            required
-                            {...register('name')}
-                        />
-                    </li>
-                    <li>
-                        <label htmlFor="email">
-                            Your contact email
-                        </label>
-                        <input
-                            type="text"
-                            id="email"
-                            required
-                            placeholder="you@email.com"
-                            {...register('email')}
-                        />
-                    </li>
-                    <li>
-                        <label htmlFor="comment">
-                            Comment to add (optional)
+                        <label htmlFor="message">
+                            Message
                         </label>
                         <textarea
-                            id="comment"
+                            id="message"
                             rows="5"
-                            {...register('comment')}
+                            {...register('message')}
                         />
+                    </li>
+                    <li>
+                        An email will be sent to you and the person asking for help. You can carry on with the discussion using any means you see fit.
                     </li>
                 </ul>
                 <button

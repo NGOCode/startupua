@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useTracker } from 'meteor/react-meteor-data';
 import { useParams } from "react-router-dom";
 
@@ -10,6 +10,7 @@ import { ContactForm } from '../../components/ContactForm/ContactForm';
 import './single-request.scss';
 
 export const SingleRequest = () => {
+    const [messageSent, setMessageSent] = useState(false);
     const params = useParams();
     const { loading, request } = useTracker(() => {
         const handler = Meteor.subscribe('singleRequest', { requestId: params.requestId });
@@ -22,7 +23,18 @@ export const SingleRequest = () => {
     });
     
     const onSubmit = data => {
-        console.log(data);
+        console.log(data)
+        
+        if (!messageSent) {
+            Meteor.call('request.contact', {
+                requestId: params.requestId,
+                message: data.message
+            }, error => {
+                if (!error) {
+                    setMessageSent(true);
+                }
+            });
+        }
     }
     
     return (
@@ -60,10 +72,18 @@ export const SingleRequest = () => {
                 <div className="actions">
                     <div className="wrapped-content">
                         <div>
-                            <h3>
-                                Offer help
-                            </h3>
-                            <ContactForm onSubmit={onSubmit} />
+                            {messageSent ?
+                                <h3>
+                                    Message sent, thanks for helping. Check your emails.
+                                </h3>
+                                :
+                                <>
+                                    <h3>
+                                        Offer help
+                                    </h3>
+                                    <ContactForm onSubmit={onSubmit} />
+                                </>
+                            }
                         </div>
                     </div>
                 </div>

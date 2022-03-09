@@ -1,5 +1,5 @@
 {
-    "name": "relocatebiz",
+    "name": "uastartups",
     "private": true,
     "scripts": {
         "start": "meteor run --settings settings.json",

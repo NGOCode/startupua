@@ -70,3 +70,28 @@ new ValidatedMethod({
         }});
     }
 });
+
+new ValidatedMethod({
+    name: 'request.contact',
+    validate: new SimpleSchema({
+        requestId: { type: String },
+        message: { type: String }
+    }).validator({ clean: true }),
+    async run({ requestId, message }) {
+        const request = RequestsCollection.findOne({ _id: requestId });
+        
+        if (!this.userId || request.solved) {
+            throw new Meteor.Error('Not authorized.');
+        }
+    
+        const sender = Meteor.user();
+        const recipient = Meteor.users.findOne({ _id: request.owner });
+    
+        Email.send({
+            to: recipient,
+            from: sender,
+            subject: 'Help is coming',
+            text: message
+        });
+    }
+});

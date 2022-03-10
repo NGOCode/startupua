@@ -25,20 +25,6 @@ export const ServiceForm = props => {
                         />
                     </li>
                     <li>
-                        <label htmlFor="service-type">
-                            Type
-                        </label>
-                        <select
-                            defaultValue={props.type}
-                            id="service-type"
-                            {...register('type')}
-                        >
-                            <option>
-                                Accounting
-                            </option>
-                        </select>
-                    </li>
-                    <li>
                         <label htmlFor="service-country">
                             Country
                         </label>

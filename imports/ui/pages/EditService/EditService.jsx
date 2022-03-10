@@ -44,17 +44,22 @@ export const EditService = () => {
             <span>loading</span>
             :
             <div className="edit-service">
-                <ServiceForm
-                    onSubmit={onSubmit}
-                    {...service}
-                />
-                <div className="actions">
-                    <button
-                        className="btn-discreet"
-                        onClick={deleteService}
-                    >
-                        Delete service
-                    </button>
+                <div className="wrapped-content">
+                    <h1>
+                        Edit your service
+                    </h1>
+                    <ServiceForm
+                        onSubmit={onSubmit}
+                        {...service}
+                    />
+                    <div className="actions">
+                        <button
+                            className="btn-discreet"
+                            onClick={deleteService}
+                        >
+                            Delete service
+                        </button>
+                    </div>
                 </div>
             </div>
     );

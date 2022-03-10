@@ -16,9 +16,14 @@ export const AddService = () => {
     
     return (
         <div className="add-service">
-            <ServiceForm
-                onSubmit={onSubmit}
-            />
+            <div className="wrapped-content">
+                <h1>
+                    Offer help
+                </h1>
+                <ServiceForm
+                    onSubmit={onSubmit}
+                />
+            </div>
         </div>
     );
 };

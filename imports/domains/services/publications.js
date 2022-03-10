@@ -16,3 +16,7 @@ Meteor.publish('singleService', function publishRequest({ serviceId }) {
         _id: serviceId,
     });
 });
+
+Meteor.publish('allServices', function publishServices() {
+    return ServicesCollection.find();
+});

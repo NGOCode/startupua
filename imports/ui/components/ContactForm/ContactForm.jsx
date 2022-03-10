@@ -19,9 +19,6 @@ export const ContactForm = props => {
                             {...register('message')}
                         />
                     </li>
-                    <li>
-                        An email will be sent to you and the person asking for help. You can carry on with the discussion using any means you see fit.
-                    </li>
                 </ul>
                 <button
                     type="submit"

@@ -2,32 +2,29 @@ import React, { useState } from 'react';
 import { useTracker } from 'meteor/react-meteor-data';
 import { useParams } from "react-router-dom";
 
-import { RequestsCollection } from '/imports/domains/requests/collection';
+import { ServicesCollection } from '/imports/domains/services/collection';
 
-import { OpenGraphReader } from '../../components';
 import { ContactForm } from '../../components/ContactForm/ContactForm';
 
-import './single-request.scss';
+import './single-service.scss';
 
-export const SingleRequest = () => {
+export const SingleService = () => {
     const [messageSent, setMessageSent] = useState(false);
     const params = useParams();
-    const { loading, request } = useTracker(() => {
-        const handler = Meteor.subscribe('singleRequest', { requestId: params.requestId });
-        const request = RequestsCollection.findOne({ _id: params.requestId });
+    const { loading, service } = useTracker(() => {
+        const handler = Meteor.subscribe('singleService', { serviceId: params.serviceId });
+        const service = ServicesCollection.findOne({ _id: params.serviceId });
         
         return {
             loading: !handler.ready(),
-            request
+            service
         };
     });
     
     const onSubmit = data => {
-        console.log(data)
-        
         if (!messageSent) {
-            Meteor.call('request.contact', {
-                requestId: params.requestId,
+            Meteor.call('service.contact', {
+                serviceId: params.requestId,
                 message: data.message
             }, error => {
                 if (!error) {
@@ -41,30 +38,23 @@ export const SingleRequest = () => {
         loading ?
             <span>loading</span>
             :
-            <div className="single-request">
+            <div className="single-service">
                 <div className="wrapped-content">
                     <div className="request-content">
                         <h5>
-                            {request.type}
+                            {service.type}
                         </h5>
                         <h1>
-                            {request.title}
+                            {service.title}
                         </h1>
                         <p className="description">
-                            {request.description}
+                            {service.description}
                         </p>
                     </div>
                     <div className="request-metadata">
-                        <OpenGraphReader url={request.website} />
-                        <h4>
-                            {request.company}
-                        </h4>
                         <ul>
                             <li>
-                                {request.website}
-                            </li>
-                            <li>
-                                {request.country}
+                                {service.country}
                             </li>
                         </ul>
                     </div>
@@ -74,15 +64,15 @@ export const SingleRequest = () => {
                         <div>
                             {messageSent ?
                                 <h3>
-                                    Message sent, thanks for helping. Check your emails.
+                                    Message sent. Check your emails.
                                 </h3>
                                 :
                                 <>
                                     <h3>
-                                        Offer help
+                                        Ask for help
                                     </h3>
                                     <p>
-                                        An email will be sent to you and the person asking for help. You can carry on with the discussion using any means you see fit.
+                                        An email will be sent to you and the person offering help. You can carry on with the discussion using any means you see fit.
                                     </p>
                                     <ContactForm onSubmit={onSubmit} />
                                 </>

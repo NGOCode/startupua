@@ -1,5 +1,6 @@
 form {
     overflow: hidden;
+    margin-bottom: 1rem;
 
     fieldset {
         border: 0;
@@ -39,10 +40,11 @@ form {
                 font-size: 1.1rem;
                 border-radius: 5px;
             }
-        }
-    }
 
-    textarea {
-        width: calc(100% - 10px);
+            textarea {
+                width: calc(100% - 10px);
+                font-size: 1rem;
+            }
+        }
     }
 }

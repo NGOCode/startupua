@@ -7,11 +7,8 @@ export const ServiceForm = props => {
     const { register, handleSubmit } = useForm();
     
     return (
-        <form className="wrapped-content form add-provider-form" onSubmit={handleSubmit(props.onSubmit)}>
+        <form className="form add-provider-form" onSubmit={handleSubmit(props.onSubmit)}>
             <fieldset>
-                <legend>
-                    Business relocation help
-                </legend>
                 <ul>
                     <li>
                         <label htmlFor="service-contact">

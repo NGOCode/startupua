@@ -8,6 +8,7 @@ import {
     AddService,
     Business,
     AddRequest,
+    SingleService,
     SingleRequest,
     EditRequest,
     EditService
@@ -21,6 +22,7 @@ export const App = () => (
                 <Route path="/" element={<Home />}/>
                 <Route path="/service-provider" element={<ServiceProvider/>}/>
                 <Route path="/service-provider/add-service" element={<AddService/>}/>
+                <Route path="/services/:serviceId" element={<SingleService/>}/>
                 <Route path="/services/:serviceId/edit" element={<EditService/>}/>
                 <Route path="/business" element={<Business/>}/>
                 <Route path="/business/add-request" element={<AddRequest/>}/>

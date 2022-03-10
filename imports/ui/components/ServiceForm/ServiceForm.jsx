@@ -33,6 +33,9 @@ export const ServiceForm = props => {
                             id="service-country"
                             {...register('country')}
                         >
+                            <option key="any" value="any">
+                                Any
+                            </option>
                             {countries.map(country => (
                                 <option key={country.code} value={country.code}>
                                     {country.name}

@@ -42,7 +42,7 @@ export const SingleService = () => {
                 <div className="wrapped-content">
                     <div className="request-content">
                         <h5>
-                            {service.type}
+                            {service.category}
                         </h5>
                         <h1>
                             {service.title}

@@ -47,13 +47,15 @@ export const EditRequest = () => {
                     onSubmit={onSubmit}
                     {...request}
                 />
-                <div className="actions">
-                    <button
-                        className="btn-discreet"
-                        onClick={closeRequest}
-                    >
-                        Close request
-                    </button>
+                <div className="wrapped-content">
+                    <div className="actions">
+                        <button
+                            className="btn-discreet"
+                            onClick={closeRequest}
+                        >
+                            Close request
+                        </button>
+                    </div>
                 </div>
             </div>
     );

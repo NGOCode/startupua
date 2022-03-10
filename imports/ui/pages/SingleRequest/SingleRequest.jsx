@@ -45,7 +45,7 @@ export const SingleRequest = () => {
                 <div className="wrapped-content">
                     <div className="request-content">
                         <h5>
-                            {request.type}
+                            {request.category}
                         </h5>
                         <h1>
                             {request.title}

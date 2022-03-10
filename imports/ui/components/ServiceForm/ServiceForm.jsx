@@ -2,6 +2,7 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 
 import countries from '/imports/domains/services/euro-countries.json';
+import { categories } from '/imports/domains/categories';
 
 export const ServiceForm = props => {
     const { register, handleSubmit } = useForm();
@@ -49,6 +50,22 @@ export const ServiceForm = props => {
                             {countries.map(country => (
                                 <option key={country.code} value={country.code}>
                                     {country.name}
+                                </option>
+                            ))}
+                        </select>
+                    </li>
+                    <li>
+                        <label htmlFor="service-category">
+                            Category
+                        </label>
+                        <select
+                            defaultValue={props.category}
+                            id="service-category"
+                            {...register('category')}
+                        >
+                            {categories.map(category => (
+                                <option key={category}>
+                                    {category}
                                 </option>
                             ))}
                         </select>

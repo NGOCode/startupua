@@ -2,6 +2,7 @@ import React  from 'react';
 import { useForm } from 'react-hook-form';
 
 import countries from '/imports/domains/services/euro-countries.json';
+import { categories } from '/imports/domains/categories';
 
 export const RequestForm = props => {
     const { register, handleSubmit } = useForm();
@@ -53,20 +54,6 @@ export const RequestForm = props => {
                         />
                     </li>
                     <li>
-                        <label htmlFor="request-type">
-                            Type
-                        </label>
-                        <select
-                            defaultValue={props.type}
-                            id="request-type"
-                            {...register('type')}
-                        >
-                            <option>
-                                Accounting
-                            </option>
-                        </select>
-                    </li>
-                    <li>
                         <label htmlFor="request-country">
                             Country
                         </label>
@@ -78,6 +65,22 @@ export const RequestForm = props => {
                             {countries.map(country => (
                                 <option key={country.code} value={country.code}>
                                     {country.name}
+                                </option>
+                            ))}
+                        </select>
+                    </li>
+                    <li>
+                        <label htmlFor="request-category">
+                            Category
+                        </label>
+                        <select
+                            defaultValue={props.category}
+                            id="request-category"
+                            {...register('category')}
+                        >
+                            {categories.map(category => (
+                                <option key={category}>
+                                    {category}
                                 </option>
                             ))}
                         </select>

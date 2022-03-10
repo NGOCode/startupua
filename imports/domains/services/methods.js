@@ -7,7 +7,7 @@ new ValidatedMethod({
     name: 'service.insert',
     validate: new SimpleSchema({
         contact: { type: String },
-        type: { type: String },
+        category: { type: String },
         title: { type: String },
         description: { type: String },
         free: { type: Boolean },
@@ -30,7 +30,7 @@ new ValidatedMethod({
         serviceId: { type: String },
         service: { type: Object },
         'service.contact': { type: String },
-        'service.type': { type: String },
+        'service.category': { type: String },
         'service.title': { type: String },
         'service.description': { type: String },
         'service.free': { type: Boolean }

@@ -7,7 +7,7 @@ new ValidatedMethod({
     name: 'request.insert',
     validate: new SimpleSchema({
         contact: { type: String },
-        type: { type: String },
+        category: { type: String },
         title: { type: String },
         description: { type: String },
         company: { type: String },
@@ -32,7 +32,7 @@ new ValidatedMethod({
         requestId: { type: String },
         request: { type: Object  },
         'request.contact': { type: String },
-        'request.type': { type: String },
+        'request.category': { type: String },
         'request.title': { type: String },
         'request.description': { type: String },
         'request.company': { type: String },

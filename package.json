@@ -2,7 +2,7 @@
     "name": "uastartups",
     "private": true,
     "scripts": {
-        "start": "MAIL_URL='smtp://apikey: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@smtp.sendgrid.net:465' meteor run --settings settings.json",
+        "start": "meteor run --settings settings.json",
         "visualize": "meteor --production --extra-packages bundle-visualizer",
         "deploy": "DEPLOY_HOSTNAME=eu-west-1.galaxy-deploy.meteor.com meteor deploy uafounders.org --settings settings-galaxy.json"
     },

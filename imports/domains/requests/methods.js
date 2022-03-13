@@ -83,13 +83,16 @@ new ValidatedMethod({
         if (!this.userId || request.solved) {
             throw new Meteor.Error('Not authorized.');
         }
-    
+        
         const sender = Meteor.user();
+        const senderEmail = sender.services.google ? sender.services.google.email : sender.emails[0].address;
         const recipient = Meteor.users.findOne({ _id: request.owner });
+        const recipientEmail = recipient.services.google ? recipient.services.google.email : recipient.emails[0].address;
     
         Email.send({
-            to: recipient,
-            from: sender,
+            to: recipientEmail,
+            from: 'noreply@uafounders.org',
+            replyTo: senderEmail,
             subject: 'Help is coming',
             text: message
         });

@@ -4,7 +4,7 @@
     "scripts": {
         "start": "meteor run --settings settings.json",
         "visualize": "meteor --production --extra-packages bundle-visualizer",
-        "deploy": "meteor deploy startupukraine.eu.meteorapp.com --free --mongo --settings settings-galaxy.json"
+        "deploy": "DEPLOY_HOSTNAME=eu-west-1.galaxy-deploy.meteor.com meteor deploy uafounders.org --settings settings-galaxy.json"
     },
     "dependencies": {
         "@babel/runtime": "^7.15.4",

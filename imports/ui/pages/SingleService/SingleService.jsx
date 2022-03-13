@@ -24,7 +24,7 @@ export const SingleService = () => {
     const onSubmit = data => {
         if (!messageSent) {
             Meteor.call('service.contact', {
-                serviceId: params.requestId,
+                serviceId: params.serviceId,
                 message: data.message
             }, error => {
                 if (!error) {

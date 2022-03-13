@@ -65,3 +65,31 @@ new ValidatedMethod({
         return ServicesCollection.remove({ _id: serviceId });
     }
 });
+
+new ValidatedMethod({
+    name: 'service.contact',
+    validate: new SimpleSchema({
+        serviceId: { type: String },
+        message: { type: String }
+    }).validator({ clean: true }),
+    async run({ serviceId, message }) {
+        const request = ServicesCollection.findOne({ _id: serviceId });
+        
+        if (!this.userId || request.solved) {
+            throw new Meteor.Error('Not authorized.');
+        }
+    
+        const sender = Meteor.user();
+        const senderEmail = sender.services.google ? sender.services.google.email : sender.emails[0].address;
+        const recipient = Meteor.users.findOne({ _id: request.owner });
+        const recipientEmail = recipient.services.google ? recipient.services.google.email : recipient.emails[0].address;
+    
+        Email.send({
+            to: recipientEmail,
+            from: 'noreply@uafounders.org',
+            replyTo: senderEmail,
+            subject: 'Help is coming',
+            text: message
+        });
+    }
+});

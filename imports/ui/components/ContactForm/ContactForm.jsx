@@ -1,4 +1,3 @@
-import { Meteor } from 'meteor/meteor';
 import React  from 'react';
 import { useForm } from 'react-hook-form';
 
@@ -16,12 +15,14 @@ export const ContactForm = props => {
                         <textarea
                             id="message"
                             rows="5"
+                            required
                             {...register('message')}
                         />
                     </li>
                 </ul>
                 <button
                     type="submit"
+                    disabled={props.sending}
                 >
                     Send email
                 </button>

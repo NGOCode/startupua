@@ -10,6 +10,7 @@ import './single-service.scss';
 
 export const SingleService = () => {
     const [messageSent, setMessageSent] = useState(false);
+    const [sending, setSending] = useState(false);
     const params = useParams();
     const { loading, service } = useTracker(() => {
         const handler = Meteor.subscribe('singleService', { serviceId: params.serviceId });
@@ -22,6 +23,8 @@ export const SingleService = () => {
     });
     
     const onSubmit = data => {
+        setSending(true);
+        
         if (!messageSent) {
             Meteor.call('service.contact', {
                 serviceId: params.serviceId,
@@ -30,6 +33,7 @@ export const SingleService = () => {
                 if (!error) {
                     setMessageSent(true);
                 }
+                setSending(false);
             });
         }
     }
@@ -74,7 +78,7 @@ export const SingleService = () => {
                                     <p>
                                         An email will be sent to you and the person offering help. You can carry on with the discussion using any means you see fit.
                                     </p>
-                                    <ContactForm onSubmit={onSubmit} />
+                                    <ContactForm onSubmit={onSubmit} sending />
                                 </>
                             }
                         </div>

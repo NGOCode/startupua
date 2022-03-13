@@ -12,6 +12,7 @@ import './single-request.scss';
 export const SingleRequest = () => {
     const [messageSent, setMessageSent] = useState(false);
     const params = useParams();
+    const [sending, setSending] = useState(false);
     const { loading, request } = useTracker(() => {
         const handler = Meteor.subscribe('singleRequest', { requestId: params.requestId });
         const request = RequestsCollection.findOne({ _id: params.requestId });
@@ -23,7 +24,7 @@ export const SingleRequest = () => {
     });
     
     const onSubmit = data => {
-        console.log(data)
+        setSending(true);
         
         if (!messageSent) {
             Meteor.call('request.contact', {
@@ -33,6 +34,8 @@ export const SingleRequest = () => {
                 if (!error) {
                     setMessageSent(true);
                 }
+    
+                setSending(false);
             });
         }
     }
@@ -84,7 +87,7 @@ export const SingleRequest = () => {
                                     <p>
                                         An email will be sent to you and the person asking for help. You can carry on with the discussion using any means you see fit.
                                     </p>
-                                    <ContactForm onSubmit={onSubmit} />
+                                    <ContactForm onSubmit={onSubmit} sending={sending} />
                                 </>
                             }
                         </div>

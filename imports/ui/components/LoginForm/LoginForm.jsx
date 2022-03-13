@@ -9,10 +9,12 @@ export const LoginForm = () => {
     };
     
     return (
-        <button
-            onClick={login}
-        >
-            Login with Google
-        </button>
+        <div className="login-form">
+            <button
+                onClick={login}
+            >
+                Login with Google
+            </button>
+        </div>
     );
 };

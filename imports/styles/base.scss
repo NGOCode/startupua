@@ -43,7 +43,7 @@ a.button, button {
 }
 
 .page {
-
+    min-height: calc(100vh - 100px);
 }
 
 .wrapped-content {
@@ -60,6 +60,13 @@ a.button, button {
     text-align: center;
     border: 5px solid #eee;
     border-radius: 5px;
+}
+
+.login-form {
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 @media only screen and (min-device-width: 812px) {

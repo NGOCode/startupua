@@ -75,7 +75,7 @@ new ValidatedMethod({
     async run({ serviceId, message }) {
         const request = ServicesCollection.findOne({ _id: serviceId });
         
-        if (!this.userId || request.solved) {
+        if (!this.userId) {
             throw new Meteor.Error('Not authorized.');
         }
     

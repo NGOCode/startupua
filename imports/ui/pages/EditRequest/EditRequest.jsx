@@ -18,7 +18,7 @@ export const EditRequest = () => {
             request: data
         }, error => {
             if (!error) {
-                navigate('/business');
+                navigate('/request');
             }
         });
     };
@@ -35,18 +35,18 @@ export const EditRequest = () => {
         Meteor.call('request.close', {
             requestId: params.requestId
         });
-        navigate('/business');
+        navigate('/request');
     };
     
     return (
         loading ?
             <span>loading</span>
             :
-            <div className="wrapped-content">
+            <div className="edit-request wrapped-content">
                 <h1>
-                    I need help with my startup
+                    Edit your request
                 </h1>
-                <div className="edit-request">
+                <div className="form-container">
                     <RequestForm
                         onSubmit={onSubmit}
                         {...request}

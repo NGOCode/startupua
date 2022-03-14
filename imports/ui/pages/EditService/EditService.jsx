@@ -43,12 +43,11 @@ export const EditService = () => {
         loading ?
             <span>loading</span>
             :
-            <div className="wrapped-content">
+            <div className="edit-service wrapped-content">
                 <h1>
-                    Edit your service
+                    Edit your offer
                 </h1>
-                
-                <div className="edit-service">
+                <div className="form-container">
                     <ServiceForm
                         onSubmit={onSubmit}
                         {...service}

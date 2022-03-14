@@ -15,11 +15,11 @@ export const AddService = () => {
     };
     
     return (
-        <div className="add-service">
-            <div className="wrapped-content">
-                <h1>
-                    Offer help
-                </h1>
+        <div className="add-service wrapped-content">
+            <h1>
+                Offer help
+            </h1>
+            <div className="form-container">
                 <ServiceForm
                     onSubmit={onSubmit}
                 />

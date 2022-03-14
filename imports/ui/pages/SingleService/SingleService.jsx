@@ -78,7 +78,7 @@ export const SingleService = () => {
                                     <p>
                                         An email will be sent to you and the person offering help. You can carry on with the discussion using any means you see fit.
                                     </p>
-                                    <ContactForm onSubmit={onSubmit} sending />
+                                    <ContactForm onSubmit={onSubmit} sending={sending} />
                                 </>
                             }
                         </div>

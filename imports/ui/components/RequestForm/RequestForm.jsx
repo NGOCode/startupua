@@ -7,11 +7,8 @@ import { categories } from '/imports/domains/categories';
 export const RequestForm = props => {
     const { register, handleSubmit } = useForm();
     return (
-        <form className="wrapped-content form add-request-form" onSubmit={handleSubmit(props.onSubmit)}>
+        <form className="form add-request-form" onSubmit={handleSubmit(props.onSubmit)}>
             <fieldset>
-                <legend>
-                    I need help with my startup
-                </legend>
                 <ul>
                     <li>
                         <label htmlFor="request-company">
@@ -87,7 +84,7 @@ export const RequestForm = props => {
                     </li>
                     <li>
                         <label htmlFor="request-title">
-                            Title
+                            Request title
                         </label>
                         <input
                             defaultValue={props.title}

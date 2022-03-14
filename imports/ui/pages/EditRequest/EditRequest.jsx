@@ -42,12 +42,15 @@ export const EditRequest = () => {
         loading ?
             <span>loading</span>
             :
-            <div className="edit-request">
-                <RequestForm
-                    onSubmit={onSubmit}
-                    {...request}
-                />
-                <div className="wrapped-content">
+            <div className="wrapped-content">
+                <h1>
+                    I need help with my startup
+                </h1>
+                <div className="edit-request">
+                    <RequestForm
+                        onSubmit={onSubmit}
+                        {...request}
+                    />
                     <div className="actions">
                         <button
                             className="btn-discreet"

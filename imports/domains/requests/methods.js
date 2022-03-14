@@ -88,7 +88,7 @@ new ValidatedMethod({
         const senderEmail = sender.services.google ? sender.services.google.email : sender.emails[0].address;
         const recipient = Meteor.users.findOne({ _id: request.owner });
         const recipientEmail = recipient.services.google ? recipient.services.google.email : recipient.emails[0].address;
-    
+        
         Email.send({
             to: recipientEmail,
             from: 'noreply@uafounders.org',

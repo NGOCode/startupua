@@ -1,8 +1,8 @@
 .edit-request {
     padding-bottom: 1rem;
 
-    .form {
-        margin-bottom: 1rem;
+    .actions {
+        margin-top: 1rem;
     }
 }
 
@@ -11,5 +11,10 @@
         display: grid;
         grid-template-columns: 3fr 1fr;
         grid-column-gap: 2rem;
+
+        .actions {
+            display: flex;
+            align-items: flex-end;
+        }
     }
 }

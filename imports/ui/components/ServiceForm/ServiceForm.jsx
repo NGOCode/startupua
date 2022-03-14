@@ -25,6 +25,19 @@ export const ServiceForm = props => {
                         />
                     </li>
                     <li>
+                        <label htmlFor="service-website">
+                            Company website
+                        </label>
+                        <input
+                            defaultValue={props.website}
+                            type="text"
+                            id="service-website"
+                            placeholder="https://website.com"
+                            required
+                            {...register('website')}
+                        />
+                    </li>
+                    <li>
                         <label htmlFor="service-country">
                             Country
                         </label>
@@ -61,7 +74,7 @@ export const ServiceForm = props => {
                     </li>
                     <li>
                         <label htmlFor="service-title">
-                            Title
+                            Offer title
                         </label>
                         <input
                             defaultValue={props.title}

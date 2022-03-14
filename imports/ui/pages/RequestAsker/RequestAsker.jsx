@@ -8,9 +8,9 @@ import {
     AllServicesList
 } from '../../components';
 
-import './business.scss';
+import './request-asker.scss';
 
-export const Business = () => {
+export const RequestAsker = () => {
     const user = useTracker(() => Meteor.user());
     
     return (

@@ -24,7 +24,7 @@ export const Home = () => {
             <div className="choose-profile">
                 <ul className="wrapped-content actions">
                     <li>
-                        <Link to="/business" className="button">
+                        <Link to="/request" className="button">
                             I have a request
                         </Link>
                     </li>

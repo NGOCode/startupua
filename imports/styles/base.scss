@@ -13,25 +13,26 @@ figure {
 a.button, button {
     display: inline-block;
     padding: .5rem 1rem;
-    border: 5px solid var(--color-primary);
+    border: 5px solid rgba(var(--color-primary-ref), 0.8);
     border-radius: 5px;
+    background: rgba(var(--color-primary-ref), 0.8);
     font-size: 1rem;
     font-weight: 600;
     text-decoration: none;
-    color: var(--color-primary);
+    color: white;
     cursor: pointer;
 
     &:hover {
         background: rgba(var(--color-primary-ref), 0.9);
-        color: white;
     }
 
     &.btn-alt {
+        background: rgba(var(--color-alt-ref), 0.8);
         border-color: var(--color-alt);
         color: black;
 
         &:hover {
-            background: rgba(var(--color-alt-ref), 0.6);
+            background: rgba(var(--color-alt-ref), 1);
         }
     }
 }
@@ -40,6 +41,7 @@ a.button, button {
     font-size: 1rem;
     border-color: grey;
     color: grey;
+    background: #ddd;
 }
 
 .page {

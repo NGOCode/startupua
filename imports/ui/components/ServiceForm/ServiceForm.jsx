@@ -112,6 +112,7 @@ export const ServiceForm = props => {
                 </ul>
                 <button
                     type="submit"
+                    className="btn-alt"
                 >
                     Submit
                 </button>

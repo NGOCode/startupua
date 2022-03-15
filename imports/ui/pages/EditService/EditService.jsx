@@ -12,16 +12,6 @@ import './edit-service.scss';
 export const EditService = () => {
     const navigate = useNavigate();
     const params = useParams();
-    const onSubmit = data => {
-        Meteor.call('service.update', {
-            serviceId: params.serviceId,
-            service: data
-        }, error => {
-            if (!error) {
-                navigate('/service-provider');
-            }
-        });
-    };
     const { loading, service } = useTracker(() => {
         const handler = Meteor.subscribe('singleService', { serviceId: params.serviceId });
         const service = ServicesCollection.findOne({ _id: params.serviceId });
@@ -31,12 +21,21 @@ export const EditService = () => {
             service
         };
     });
-    
+    const onSubmit = data => {
+        Meteor.call('service.update', {
+            serviceId: params.serviceId,
+            service: data
+        }, error => {
+            if (!error) {
+                navigate('/service');
+            }
+        });
+    };
     const deleteService = () => {
         Meteor.call('service.remove', {
             serviceId: params.serviceId
         });
-        navigate('/service-provider');
+        navigate('/service');
     };
     
     return (

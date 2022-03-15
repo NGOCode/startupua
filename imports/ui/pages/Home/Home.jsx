@@ -24,7 +24,7 @@ export const Home = () => {
                             </Link>
                         </li>
                         <li>
-                            <Link to="/service-provider" className="button btn-alt">
+                            <Link to="/service" className="button btn-alt">
                                 I can offer help
                             </Link>
                         </li>

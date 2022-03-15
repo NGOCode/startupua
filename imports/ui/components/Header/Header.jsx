@@ -13,8 +13,7 @@ export const Header = () => {
         <header className="main-header">
             <Link className="branding" to="/">
                 <figure className="logo">
-                    <img
-                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Ukraine.svg/2560px-Flag_of_Ukraine.svg.png"/>
+                    <img src="/logo.png"/>
                 </figure>
                 <span className="brand-name">
                     UA Founders
@@ -28,7 +27,7 @@ export const Header = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link to="/service-provider" className={cn({ selected: isService })}>
+                        <Link to="/service" className={cn({ selected: isService })}>
                             Offer help
                         </Link>
                     </li>

@@ -20,8 +20,8 @@ export const App = () => (
         <div className="page">
             <Routes>
                 <Route path="/" element={<Home />}/>
-                <Route path="/service-provider" element={<ServiceProvider/>}/>
-                <Route path="/service-provider/add-service" element={<AddService/>}/>
+                <Route path="/service" element={<ServiceProvider/>}/>
+                <Route path="/service/add-service" element={<AddService/>}/>
                 <Route path="/services/:serviceId" element={<SingleService/>}/>
                 <Route path="/services/:serviceId/edit" element={<EditService/>}/>
                 <Route path="/request" element={<RequestAsker/>}/>

@@ -3,10 +3,10 @@
     padding: 0;
     margin: 0 0 1rem 0;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    overflow-x: auto;
 
     li {
+        white-space: nowrap;
         margin: 0 .5rem .5rem 0;
     }
 
@@ -34,6 +34,23 @@
                 background: lightgrey;
                 border-radius: 100%;
             }
+        }
+    }
+}
+
+@media only screen and (min-device-width: 812px) {
+    .categories-filter {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 1rem 0;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        overflow-x: visible;
+
+        li {
+            white-space: normal;
         }
     }
 }

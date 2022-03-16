@@ -4,8 +4,7 @@ import { Link } from 'react-router-dom';
 
 import {
     LoginForm,
-    MyRequestsList,
-    AllServicesList
+    MyRequestsList
 } from '../../components';
 
 import './request-asker.scss';
@@ -23,7 +22,7 @@ export const RequestAsker = () => {
                                 Your requests
                             </span>
                             <Link to='add-request' className="button">
-                                Ask for help
+                                Post a new request
                             </Link>
                         </h2>
                     </div>
@@ -32,12 +31,14 @@ export const RequestAsker = () => {
                             <MyRequestsList />
                         </div>
                     </div>
-                    <div className="all-services-container">
+                    <div className="actions">
                         <div className="wrapped-content">
-                            <h2>
-                                Help offered
-                            </h2>
-                            <AllServicesList />
+                            <Link
+                                to="/request/all-offers"
+                                className="button btn-alt"
+                            >
+                                Browse the help offered
+                            </Link>
                         </div>
                     </div>
                 </>

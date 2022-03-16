@@ -10,17 +10,10 @@
         padding: 2rem 0;
     }
 
-    .all-requests-container {
-        background: rgba(var(--color-primary-ref), 0.05);
-        padding: 2rem 0;
-
-        a {
-            text-decoration: none;
-            color: black;
-        }
-
-        .description {
-            display: none;
-        }
+    .actions {
+        background: rgba(var(--color-primary-ref), 0.1);
+        display: flex;
+        align-items: center;
+        padding: 4rem 0;
     }
 }

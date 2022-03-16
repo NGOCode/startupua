@@ -1,0 +1,22 @@
+.all-services {
+    .all-services-list {
+        padding: 0;
+    }
+
+    .service-item {
+        .description {
+            display: none;
+        }
+    }
+}
+
+@media only screen and (min-device-width: 812px) {
+    .all-services {
+        .all-services-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-column-gap: 2rem;
+            grid-row-gap: 2rem;
+        }
+    }
+}

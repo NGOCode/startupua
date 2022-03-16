@@ -44,7 +44,7 @@ export const AllServicesList = () => {
                     handleClicked={handleFilterClicked}
                 />
                 {services && services.length > 0 ?
-                    <ul className="cards-list all-services-list">
+                    <ul className="all-services-list">
                         {services.map(service => (
                             <ServiceItem
                                 key={service._id}

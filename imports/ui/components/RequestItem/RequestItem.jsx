@@ -15,7 +15,7 @@ export const RequestItem = props => {
                 <h4>
                     {props.title}
                 </h4>
-                <p>
+                <p className="description">
                     {props.description}
                 </p>
                 <p className="website">

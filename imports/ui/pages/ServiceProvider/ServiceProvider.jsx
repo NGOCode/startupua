@@ -4,8 +4,7 @@ import { Link } from 'react-router-dom';
 
 import {
     LoginForm,
-    MyServicesList,
-    AllRequestsList
+    MyServicesList
 } from '../../components';
 
 import './service-provider.scss';
@@ -29,13 +28,14 @@ export const ServiceProvider = () => {
                         </h2>
                         <MyServicesList />
                     </div>
-                  
-                    <div className="all-requests-container">
+                    <div className="actions">
                         <div className="wrapped-content">
-                            <h2>
-                                Help needed
-                            </h2>
-                            <AllRequestsList />
+                            <Link
+                                to="/service/all-needs"
+                                className="button"
+                            >
+                                Browse requests
+                            </Link>
                         </div>
                     </div>
                 </>

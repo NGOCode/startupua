@@ -9,11 +9,11 @@ export const Home = () => {
             <div className="wrapped-content banner">
                 <div className="banner-content">
                     <h1>
-                        Get help from other EU founders
+                        Get help from other entrepreneurs
                     </h1>
                     <p className="banner-description">
-                        Ask other startup founders in the EU for advice or help regarding.
-                        Leverage a network of people willing to help out so you can keep you project afloat in these troubled times.
+                        Ask for advice or help.
+                        Leverage a network of people willing to help out so you can keep your project afloat in these troubled times.
                     </p>
                 </div>
                 <div className="choose-profile">

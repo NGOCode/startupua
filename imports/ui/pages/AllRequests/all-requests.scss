@@ -1,0 +1,22 @@
+.all-requests {
+    .all-services-list {
+        padding: 0;
+    }
+
+    .request.item {
+        .description {
+            display: none;
+        }
+    }
+}
+
+@media only screen and (min-device-width: 812px) {
+    .all-requests {
+        .all-requests-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-column-gap: 2rem;
+            grid-row-gap: 2rem;
+        }
+    }
+}

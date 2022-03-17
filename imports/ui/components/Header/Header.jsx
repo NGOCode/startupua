@@ -1,40 +1,36 @@
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import cn from 'classnames';
 
 import './header.scss';
 
 export const Header = () => {
-    const { pathname } = useLocation();
-    const isService = pathname.indexOf('service') !== -1;
-    const isRequest = pathname.indexOf('request') !== -1;
-    
     return (
-        <header className="main-header">
-            <Link className="branding" to="/">
+        <header className={cn('main-header')}>
+            <NavLink className="branding" to="/">
                 <figure className="logo">
                     <img src="/logo.png"/>
                 </figure>
                 <span className="brand-name">
                     UA Founders
                 </span>
-            </Link>
+            </NavLink>
             <nav className="main-nav">
                 <ul>
                     <li className="home">
-                        <Link to="/">
+                        <NavLink to="/">
                             Home
-                        </Link>
+                        </NavLink>
                     </li>
                     <li>
-                        <Link to="/service" className={cn({ selected: isService })}>
-                            Offer help
-                        </Link>
+                        <NavLink to="/service" activeClassName>
+                            👀 Offer help
+                        </NavLink>
                     </li>
                     <li>
-                        <Link to="/request" className={cn({ selected: isRequest })}>
+                        <NavLink to="/request" activeClassName>
                             Ask for help
-                        </Link>
+                        </NavLink>
                     </li>
                 </ul>
             </nav>

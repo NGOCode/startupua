@@ -1,10 +1,11 @@
 .main-footer {
     height: 50px;
-    background: var(--color-primary);
+}
+
+.front-page .main-footer {
+    margin-top: -50px;
 }
 
 @media only screen and (min-device-width: 812px) {
-    .main-footer {
 
-    }
 }

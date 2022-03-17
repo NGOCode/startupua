@@ -6,13 +6,13 @@ import './home.scss';
 export const Home = () => {
     return (
         <div className="page-content home">
-            <div className="wrapped-content banner">
+            <div className="banner">
                 <div className="banner-content">
                     <h1>
                         Get help from other entrepreneurs
                     </h1>
                     <p className="banner-description">
-                        Ask for advice or help.
+                        Ask for help or offer it.
                         Leverage a network of people willing to help out so you can keep your project afloat in these troubled times.
                     </p>
                 </div>
@@ -32,26 +32,26 @@ export const Home = () => {
                 </div>
             </div>
             <div className="more-info">
-                <ul className="wrapped-content">
+                <ul className="">
                     <li>
                         <h3>
-                            Have a request?
+                            🙏 Have a request?
                         </h3>
                         <p>
-                            Keeping you business alive is a small thing to do in war times, but it will prove
-                            very valuable for your country and your people. If there is anything EU founders can help you with,
-                            feel free to create a new request or browse the list of things people have offered to help with.
+                            Keeping your business alive is a small thing to do in war times, but it will be very
+                            valuable for your country's economy and your people. If there is anything global founders
+                            can help you with, feel free to create a new request or browse the list of offers already published.
                         </p>
                     </li>
                     <li>
                         <h3>
-                            Want to help?
+                            ✋ Want to help?
                         </h3>
                         <p>
-                            If you have crisis management experience, contacts or some spare time and
-                            resources and want to participate in
-                            helping Ukrainian startups weather this difficult time, you can post about the different things you can offer.
-                            You can also browser a list of requests from UA founders and see if you can help out.
+                            If you have crisis management experience, a network to share, available resources or
+                            some spare time and you want to help Ukrainian entrepreneurs during this difficult
+                            time, you can publish your offer here. You can also browser a list of requests and
+                            see if you can help out with existing ones.
                         </p>
                     </li>
                 </ul>

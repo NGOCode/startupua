@@ -1,6 +1,5 @@
 .main-header {
     margin: auto;
-    max-width: 980px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -46,9 +45,10 @@
                 font-weight: 600;
 
                 a {
+                    color: var(--color-text);
                     text-decoration: none;
 
-                    &.selected {
+                    &.active {
                         border-bottom: 1px solid var(--color-primary);
                     }
                 }
@@ -63,9 +63,25 @@
 
 @media only screen and (min-device-width: 812px) {
     .main-header {
+        position: relative;
+        z-index: 2;
+        padding: 0 4rem;
+
         .logo {
             img {
                 height: 25px;
+            }
+        }
+    }
+
+    .front-page .main-header {
+        margin-bottom: -50px;
+
+        .main-nav {
+            li {
+                a {
+                    color: white;
+                }
             }
         }
     }

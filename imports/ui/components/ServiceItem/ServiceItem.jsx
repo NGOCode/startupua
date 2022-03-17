@@ -7,12 +7,12 @@ export const ServiceItem = props => {
     return (
         <li className="service-item">
             <Link to={props.linkTo}>
-                <h6>
+                <span className="category">
                     {props.category}
-                </h6>
-                <h3>
+                </span>
+                <h4 className="title">
                     {props.title}
-                </h3>
+                </h4>
                 <p className="description">
                     {props.description}
                 </p>

@@ -1,7 +1,7 @@
 import { Home } from './Home/Home.jsx';
 import { ServiceProvider } from './ServiceProvider/ServiceProvider.jsx';
 import { AddService } from './AddService/AddService.jsx';
-import { RequestAsker } from './RequestAsker/RequestAsker.jsx';
+import { Requester } from './Requester/Requester.jsx';
 import { AddRequest } from './AddRequest/AddRequest.jsx';
 import { SingleRequest } from './SingleRequest/SingleRequest.jsx';
 import { AllServices } from './AllServices/AllServices.jsx';
@@ -14,7 +14,7 @@ export {
     Home,
     ServiceProvider,
     AddService,
-    RequestAsker,
+    Requester,
     AddRequest,
     SingleService,
     AllServices,

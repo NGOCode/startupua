@@ -1,10 +1,15 @@
 .all-requests {
-    .all-services-list {
+    .all-requests-list {
         padding: 0;
     }
 
-    .request.item {
-        .description {
+    .request-item {
+        .title {
+            margin: 1rem 0;
+            font-size: 1.2rem;
+        }
+
+        .description, .website {
             display: none;
         }
     }
@@ -16,7 +21,7 @@
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             grid-column-gap: 2rem;
-            grid-row-gap: 2rem;
+            grid-row-gap: 1rem;
         }
     }
 }

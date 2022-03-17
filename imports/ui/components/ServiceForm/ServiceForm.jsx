@@ -39,7 +39,7 @@ export const ServiceForm = props => {
                     </li>
                     <li>
                         <label htmlFor="service-country">
-                            Country
+                            Is your offer for a specific country?
                         </label>
                         <select
                             defaultValue={props.country}

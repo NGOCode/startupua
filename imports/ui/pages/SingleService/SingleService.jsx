@@ -6,6 +6,8 @@ import { ServicesCollection } from '/imports/domains/services/collection';
 
 import { ContactForm } from '../../components/ContactForm/ContactForm';
 
+import countries from '/imports/domains/services/euro-countries.json';
+
 import './single-service.scss';
 
 export const SingleService = () => {
@@ -38,15 +40,17 @@ export const SingleService = () => {
         }
     }
     
+    const country = service ? countries.find(country => country.code === service.country) : null;
+    
     return (
         loading ?
             <span>loading</span>
             :
             <div className="single-service">
                 <div className="wrapped-content">
-                    <div className="request-content">
+                    <div className="service-content">
                         <h5>
-                            {service.category}
+                            {service.category}{service.country ? `/ ${country.name}` : null}
                         </h5>
                         <h1>
                             {service.title}
@@ -55,11 +59,18 @@ export const SingleService = () => {
                             {service.description}
                         </p>
                     </div>
-                    <div className="request-metadata">
+                    <div className="service-metadata">
                         <ul>
+                            {service.website &&
+                            <li>
+                                {service.website}
+                            </li>
+                            }
+                            {service.country &&
                             <li>
                                 {service.country}
                             </li>
+                            }
                         </ul>
                     </div>
                 </div>

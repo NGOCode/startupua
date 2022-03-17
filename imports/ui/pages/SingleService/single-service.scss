@@ -7,8 +7,8 @@
     }
 
     .actions {
-        background: rgba(var(--color-primary-ref), .09);
-        padding: 2rem;
+        background: rgba(var(--color-alt-ref), .09);
+        padding: 2rem 0;
     }
 }
 
@@ -29,6 +29,7 @@
             .wrapped-content {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
+                padding: 0 4rem;
             }
         }
     }

@@ -14,18 +14,5 @@
                 max-width: 100%;
             }
         }
-
-        &:after {
-            content: '→';
-            display: block;
-            text-align: right;
-            margin-top: 1rem;
-            opacity: .6;
-            transition: opacity 200ms ease-in;
-        }
-
-        &:hover:after {
-            opacity: 1;
-        }
     }
 }

@@ -9,11 +9,15 @@
     .request-content {
         margin-bottom: 1rem;
     }
+
+    .actions {
+        background: rgba(var(--color-primary-ref), .09);
+        padding: 2rem 0;
+    }
 }
 
 @media only screen and (min-device-width: 812px) {
     .single-request {
-
         & > .wrapped-content {
             display: grid;
             grid-template-columns: 3fr 1fr;
@@ -26,12 +30,10 @@
         }
 
         .actions {
-            background: rgba(var(--color-alt-ref), .09);
-
             .wrapped-content {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
-                padding: 2rem;
+                padding: 0 4rem;
             }
         }
     }

@@ -7,6 +7,8 @@ import { RequestsCollection } from '/imports/domains/requests/collection';
 import { OpenGraphReader } from '../../components';
 import { ContactForm } from '../../components/ContactForm/ContactForm';
 
+import countries from '/imports/domains/services/euro-countries.json';
+
 import './single-request.scss';
 
 export const SingleRequest = () => {
@@ -40,6 +42,8 @@ export const SingleRequest = () => {
         }
     }
     
+    const country = request ? countries.find(country => country.code === request.country) : null;
+    
     return (
         loading ?
             <span>loading</span>
@@ -48,7 +52,7 @@ export const SingleRequest = () => {
                 <div className="wrapped-content">
                     <div className="request-content">
                         <h5>
-                            {request.category}
+                            {request.category}{request.country ? `/ ${country.name}` : null}
                         </h5>
                         <h1>
                             {request.title}
@@ -59,16 +63,17 @@ export const SingleRequest = () => {
                     </div>
                     <div className="request-metadata">
                         <OpenGraphReader url={request.website} />
+                        {request.company &&
                         <h4>
                             {request.company}
                         </h4>
+                        }
                         <ul>
+                            {request.website &&
                             <li>
                                 {request.website}
                             </li>
-                            <li>
-                                {request.country}
-                            </li>
+                            }
                         </ul>
                     </div>
                 </div>

@@ -7,13 +7,13 @@ import {
     MyRequestsList
 } from '../../components';
 
-import './request-asker.scss';
+import './requester.scss';
 
-export const RequestAsker = () => {
+export const Requester = () => {
     const user = useTracker(() => Meteor.user());
     
     return (
-        <div className="business">
+        <div className="requester">
             {user ?
                 <>
                     <div className="wrapped-content">

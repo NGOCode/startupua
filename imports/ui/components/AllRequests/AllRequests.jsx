@@ -47,7 +47,7 @@ export const AllRequestsList = () => {
                     handleClicked={handleFilterClicked}
                 />
                 {requests && requests.length > 0 ?
-                    <ul className="cards-list all-requests-list">
+                    <ul className="all-requests-list">
                         {requests.map(request => (
                             <RequestItem
                                 key={request._id}

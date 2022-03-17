@@ -12,7 +12,7 @@ export const RequestItem = props => {
                 <span className="company-name">
                     {props.company}
                 </span>
-                <h4>
+                <h4 className="title">
                     {props.title}
                 </h4>
                 <p className="description">
@@ -21,7 +21,6 @@ export const RequestItem = props => {
                 <p className="website">
                     {props.website}
                 </p>
-                <OpenGraphReader url={props.website}/>
             </Link>
         </li>
     );

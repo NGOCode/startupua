@@ -11,6 +11,7 @@ new ValidatedMethod({
         title: { type: String },
         description: { type: String },
         company: { type: String },
+        country: { type: String },
         website: { type: String },
     }).validator({ clean: true }),
     run(request) {
@@ -33,6 +34,7 @@ new ValidatedMethod({
         request: { type: Object  },
         'request.contact': { type: String },
         'request.category': { type: String },
+        'request.country': { type: String },
         'request.title': { type: String },
         'request.description': { type: String },
         'request.company': { type: String },

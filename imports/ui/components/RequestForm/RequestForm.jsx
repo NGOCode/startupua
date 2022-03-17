@@ -52,13 +52,16 @@ export const RequestForm = props => {
                     </li>
                     <li>
                         <label htmlFor="request-country">
-                            Country
+                            Is your request for a specific country?
                         </label>
                         <select
                             defaultValue={props.country}
                             id="request-country"
                             {...register('country')}
                         >
+                            <option key="any" value="any">
+                                Any
+                            </option>
                             {countries.map(country => (
                                 <option key={country.code} value={country.code}>
                                     {country.name}

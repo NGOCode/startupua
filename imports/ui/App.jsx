@@ -7,7 +7,7 @@ import {
     Home,
     ServiceProvider,
     AddService,
-    RequestAsker,
+    Requester,
     AddRequest,
     AllServices,
     AllRequests,
@@ -32,7 +32,7 @@ export const App = () => {
                     <Route path="/service/add-service" element={<AddService/>}/>
                     <Route path="/services/:serviceId" element={<SingleService/>}/>
                     <Route path="/services/:serviceId/edit" element={<EditService/>}/>
-                    <Route path="/request" element={<RequestAsker/>}/>
+                    <Route path="/request" element={<Requester/>}/>
                     <Route path="/request/all-offers" element={<AllServices/>}/>
                     <Route path="/request/add-request" element={<AddRequest/>}/>
                     <Route path="/requests/:requestId" element={<SingleRequest/>}/>

@@ -3,11 +3,16 @@ export const categories = [
     'Team management',
     'Market research',
     'Investors contact',
-    'Finance',
+    'Financials',
     'Crisis management',
     'Relocation',
     'Visas',
     'IT Security',
     'IT Infrastructure',
+    'IT outsourcing',
+    'Marketing',
+    'HR',
+    'Product',
+    'Logistics',
     'Other'
 ]

@@ -50,7 +50,7 @@ export const SingleService = () => {
                 <div className="wrapped-content">
                     <div className="service-content">
                         <h5>
-                            {service.category}{service.country ? `/ ${country.name}` : null}
+                            {service.category}{(service.country && service.country !== 'any') ? `/ ${country.name}` : null}
                         </h5>
                         <h1>
                             {service.title}

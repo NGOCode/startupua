@@ -52,7 +52,7 @@ export const SingleRequest = () => {
                 <div className="wrapped-content">
                     <div className="request-content">
                         <h5>
-                            {request.category}{request.country ? `/ ${country.name}` : null}
+                            {request.category}{(request.country && request.country !== 'any') ? `/ ${country.name}` : null}
                         </h5>
                         <h1>
                             {request.title}

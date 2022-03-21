@@ -29,7 +29,7 @@ export const Home = () => {
                             </Link>
                         </li>
                         <li className="all-offers">
-                            <Link to="/service/all-needs">
+                            <Link to="/request/all-offers">
                                 See all offers
                             </Link>
                         </li>

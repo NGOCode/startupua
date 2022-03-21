@@ -9,7 +9,7 @@ export const Home = () => {
             <div className="banner">
                 <div className="banner-content">
                     <h1>
-                        Get help from other entrepreneurs
+                        Ukrainian Entrepreneur? Get help from the international business community
                     </h1>
                     <p className="banner-description">
                         Ask for help or offer it.
@@ -26,6 +26,11 @@ export const Home = () => {
                         <li>
                             <Link to="/service" className="button btn-alt">
                                 I can offer help
+                            </Link>
+                        </li>
+                        <li className="all-offers">
+                            <Link to="/service/all-needs">
+                                See all offers
                             </Link>
                         </li>
                     </ul>

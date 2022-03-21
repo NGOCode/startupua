@@ -24,7 +24,7 @@ export const Header = () => {
                     </li>
                     <li>
                         <NavLink to="/service" activeClassName>
-                            👀 Offer help
+                            Offer help
                         </NavLink>
                     </li>
                     <li>

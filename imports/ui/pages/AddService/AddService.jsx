@@ -9,7 +9,7 @@ export const AddService = () => {
     const onSubmit = data => {
         Meteor.call('service.insert', data, error => {
             if (!error) {
-                navigate('/service-provider');
+                navigate('/service');
             }
         });
     };

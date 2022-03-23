@@ -18,7 +18,8 @@ import {
 } from './pages';
 
 import {
-    MyServicesList
+    MyServicesList,
+    MyRequestsList
 } from './components';
 
 export const App = () => {
@@ -32,19 +33,22 @@ export const App = () => {
                 <Routes>
                     <Route path="/" element={<Home/>}/>
                     <Route path="/services" element={<ServiceProvider/>}>
-                        <Route index element={<Navigate to="/services/all" replace />} />
-                        <Route path="/services/all" element={<AllRequests/>}/>
+                        <Route index element={<Navigate to="/services/all-requests" replace />} />
+                        <Route path="/services/all-requests" element={<AllRequests/>}/>
                         <Route path="/services/:serviceId" element={<SingleService/>}/>
                         <Route path="/services/my-offers" element={<MyServicesList/>}/>
                         <Route path="/services/my-offers/:serviceId/edit" element={<EditService/>}/>
                         <Route path="/services/my-offers/add" element={<AddService/>}/>
                     </Route>
                     
-                    <Route path="/requests" element={<Requester/>}/>
-                    <Route path="/requests/all-offers" element={<AllServices/>}/>
-                    <Route path="/requests/add" element={<AddRequest/>}/>
-                    <Route path="/requests/:requestId" element={<SingleRequest/>}/>
-                    <Route path="/requests/:requestId/edit" element={<EditRequest/>}/>
+                    <Route path="/requests" element={<Requester/>}>
+                        <Route index element={<Navigate to="/requests/all-offers" replace />} />
+                        <Route path="/requests/all-offers" element={<AllServices/>}/>
+                        <Route path="/requests/my-requests" element={<MyRequestsList />}/>
+                        <Route path="/requests/my-requests/add" element={<AddRequest/>}/>
+                        <Route path="/requests/my-requests/:requestId/edit" element={<EditRequest/>}/>
+                        <Route path="/requests/:requestId" element={<SingleRequest/>}/>
+                    </Route>
                 </Routes>
             </div>
             <Footer/>

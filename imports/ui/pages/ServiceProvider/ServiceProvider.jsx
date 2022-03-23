@@ -24,7 +24,7 @@ export const ServiceProvider = () => {
                         <ul className="sub-nav">
                             <li>
                                 <NavLink
-                                    to="/services/all"
+                                    to="/services/all-requests"
                                     className={({ isActive }) =>
                                         cn('button', { active: isActive })
                                     }

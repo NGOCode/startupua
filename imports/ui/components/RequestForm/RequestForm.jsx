@@ -94,6 +94,7 @@ export const RequestForm = props => {
                             type="text"
                             id="request-title"
                             size="50"
+                            maxLength="100"
                             required
                             placeholder="I need help with paperwork for visa application"
                             {...register('title')}
@@ -107,7 +108,7 @@ export const RequestForm = props => {
                             defaultValue={props.description}
                             id="request-desc"
                             cols="45"
-                            rows="5"
+                            rows="15"
                             placeholder="describe in detail what you are looking for, it will make it easier to get help"
                             {...register('description')}
                         />

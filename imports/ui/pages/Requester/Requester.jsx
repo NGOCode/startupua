@@ -1,10 +1,10 @@
 import React from 'react';
 import { useTracker } from 'meteor/react-meteor-data';
-import { Link } from 'react-router-dom';
+import { Outlet, NavLink } from 'react-router-dom';
+import cn from 'classnames';
 
 import {
-    LoginForm,
-    MyRequestsList
+    LoginForm
 } from '../../components';
 
 import './requester.scss';
@@ -15,33 +15,36 @@ export const Requester = () => {
     return (
         <div className="requester">
             {user ?
-                <>
-                    <div className="wrapped-content">
-                        <h2>
-                            <span>
-                                Your requests
-                            </span>
-                            <Link to='add-request' className="button">
-                                Post a new request
-                            </Link>
-                        </h2>
-                    </div>
-                    <div className="my-requests-container">
-                        <div className="wrapped-content">
-                            <MyRequestsList />
-                        </div>
-                    </div>
-                    <div className="actions">
-                        <div className="wrapped-content">
-                            <Link
-                                to="/request/all-offers"
-                                className="button btn-alt"
+                <div className="wrapped-content">
+                    <h2>
+                        Ask for help
+                    </h2>
+                    <ul className="sub-nav">
+                        <li>
+                            <NavLink
+                                to="/requests/all-offers"
+                                className={({ isActive }) =>
+                                    cn('button', { active: isActive })
+                                }
                             >
-                                Browse the help offered
-                            </Link>
-                        </div>
+                                Browse offers
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink
+                                to='/requests/my-requests'
+                                className={({ isActive }) =>
+                                    cn('button', { active: isActive })
+                                }
+                            >
+                                Your requests
+                            </NavLink>
+                        </li>
+                    </ul>
+                    <div className="page-content">
+                        <Outlet />
                     </div>
-                </>
+                </div>
                 :
                 <div className="wrapped-content">
                     <LoginForm/>

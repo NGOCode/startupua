@@ -15,7 +15,7 @@
         position: relative;
 
         .title {
-            margin: 0;
+            font-size: 1rem;
             font-weight: 300;
         }
 
@@ -24,6 +24,7 @@
             text-align: right;
             font-size: .8rem;
             font-weight: 300;
+            margin-bottom: 1rem;
 
             &:after {
                 content: '→';

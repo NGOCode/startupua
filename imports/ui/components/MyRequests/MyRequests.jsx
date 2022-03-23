@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTracker } from 'meteor/react-meteor-data';
+import { Link } from 'react-router-dom';
 
 import { RequestsCollection } from '/imports/domains/requests/collection';
 
@@ -17,18 +18,26 @@ export const MyRequestsList = () => {
     });
     
     return (
-        <div className="my-requests">
+        <div className="my-requests-container">
             {loading ?
                 <span>
                     Loading
                 </span>
                 :
                 <ul className="my-requests-list">
+                    <li className="request-item add-placeholder">
+                        <Link
+                            to="add"
+                            className="button"
+                        >
+                            Publish new request
+                        </Link>
+                    </li>
                     {requests.map(request => (
                         <RequestItem
                             key={request._id}
                             {...request}
-                            linkTo={`/requests/${request._id}/edit`}
+                            linkTo={`/requests/my-requests/${request._id}/edit`}
                         />
                     ))}
                 </ul>

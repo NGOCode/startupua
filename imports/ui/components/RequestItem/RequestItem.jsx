@@ -10,12 +10,12 @@ export const RequestItem = props => {
                 <span className="category">
                     {props.category}
                 </span>
-                <h3 className="company-name">
+                <span className="company-name">
                     {props.company}
-                </h3>
-                <span className="title">
-                    {props.title}
                 </span>
+                <h3 className="title">
+                    {props.title}
+                </h3>
                 <p className="description">
                     {props.description}
                 </p>

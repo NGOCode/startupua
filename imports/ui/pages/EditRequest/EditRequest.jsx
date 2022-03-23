@@ -1,5 +1,5 @@
 import React  from 'react';
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { useTracker } from 'meteor/react-meteor-data';
 import { useParams } from "react-router-dom";
 
@@ -42,7 +42,10 @@ export const EditRequest = () => {
         loading ?
             <span>loading</span>
             :
-            <div className="edit-request wrapped-content">
+            <div className="edit-request">
+                <Link to="/requests/my-requests" className="back-action">
+                    ← Back
+                </Link>
                 <h1>
                     Edit your request
                 </h1>

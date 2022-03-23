@@ -1,5 +1,5 @@
 import React  from 'react';
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 import { RequestForm } from '../../components/RequestForm/RequestForm';
 
@@ -14,7 +14,10 @@ export const AddRequest = () => {
     };
     
     return (
-        <div className="add-request wrapped-content">
+        <div className="add-request">
+            <Link to="/requests/my-requests" className="back-action">
+                ← Back
+            </Link>
             <h1>
                 I need help with my startup
             </h1>

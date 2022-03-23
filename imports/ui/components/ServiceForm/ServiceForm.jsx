@@ -82,6 +82,7 @@ export const ServiceForm = props => {
                             id="service-title"
                             required
                             size="50"
+                            maxLength="100"
                             {...register('title')}
                         />
                     </li>
@@ -93,7 +94,7 @@ export const ServiceForm = props => {
                             defaultValue={props.description}
                             id="service-desc"
                             cols="45"
-                            rows="5"
+                            rows="15"
                             placeholder="Describe what you can help with"
                             {...register('description')}
                         />

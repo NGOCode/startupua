@@ -10,9 +10,9 @@ export const ServiceItem = props => {
                 <span className="category">
                     {props.category}
                 </span>
-                <h4 className="title">
+                <h3 className="title">
                     {props.title}
-                </h4>
+                </h3>
                 <p className="description">
                     {props.description}
                 </p>

@@ -18,7 +18,7 @@ export const EditRequest = () => {
             request: data
         }, error => {
             if (!error) {
-                navigate('/request');
+                navigate('/ask-help/my-requests');
             }
         });
     };
@@ -35,7 +35,7 @@ export const EditRequest = () => {
         Meteor.call('request.close', {
             requestId: params.requestId
         });
-        navigate('/request');
+        navigate('/ask-help/my-requests');
     };
     
     return (
@@ -43,7 +43,7 @@ export const EditRequest = () => {
             <span>loading</span>
             :
             <div className="edit-request">
-                <Link to="/requests/my-requests" className="back-action">
+                <Link to="/ask-help/my-requests" className="back-action">
                     ← Back
                 </Link>
                 <h1>

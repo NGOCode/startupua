@@ -9,14 +9,14 @@ export const AddService = () => {
     const onSubmit = data => {
         Meteor.call('service.insert', data, error => {
             if (!error) {
-                navigate('/services');
+                navigate('/offer-help/my-offers');
             }
         });
     };
     
     return (
         <div className="add-service">
-            <Link to="/services/my-offers" className="back-action">
+            <Link to="/offer-help/my-offers" className="back-action">
                 ← Back
             </Link>
             <h1>

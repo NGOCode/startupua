@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useTracker } from 'meteor/react-meteor-data';
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 
 import { RequestsCollection } from '/imports/domains/requests/collection';
 
@@ -49,54 +49,52 @@ export const SingleRequest = () => {
             <span>loading</span>
             :
             <div className="single-request">
-                <div className="wrapped-content">
-                    <div className="request-content">
-                        <h5>
-                            {request.category}{(request.country && request.country !== 'any') ? `/ ${country.name}` : null}
-                        </h5>
-                        <h1>
-                            {request.title}
-                        </h1>
-                        <p className="description">
-                            {request.description}
-                        </p>
-                    </div>
-                    <div className="request-metadata">
-                        <OpenGraphReader url={request.website} />
-                        {request.company &&
-                        <h4>
-                            {request.company}
-                        </h4>
-                        }
-                        <ul>
-                            {request.website &&
-                            <li>
-                                {request.website}
-                            </li>
-                            }
-                        </ul>
-                    </div>
+                <div className="request-content">
+                    <Link to="/offer-help" className="back-action">
+                        ← Back
+                    </Link>
+                    <h5>
+                        {request.category}{(request.country && request.country !== 'any') ? `/ ${country.name}` : null}
+                    </h5>
+                    <h1>
+                        {request.title}
+                    </h1>
+                    <p className="description">
+                        {request.description}
+                    </p>
                 </div>
+                <div className="request-metadata">
+                    <OpenGraphReader url={request.website} />
+                    {request.company &&
+                    <h4>
+                        {request.company}
+                    </h4>
+                    }
+                    <ul>
+                        {request.website &&
+                        <li>
+                            {request.website}
+                        </li>
+                        }
+                    </ul>
+                </div>
+                
                 <div className="actions">
-                    <div className="wrapped-content">
-                        <div>
-                            {messageSent ?
-                                <h3>
-                                    Message sent, thanks for helping. Check your emails.
-                                </h3>
-                                :
-                                <>
-                                    <h3>
-                                        Offer help
-                                    </h3>
-                                    <p>
-                                        An email will be sent to you and the person asking for help. You can carry on with the discussion using any means you see fit.
-                                    </p>
-                                    <ContactForm onSubmit={onSubmit} sending={sending} />
-                                </>
-                            }
-                        </div>
-                    </div>
+                    {messageSent ?
+                        <h3>
+                            Message sent, thanks for helping. Check your emails.
+                        </h3>
+                        :
+                        <>
+                            <h3>
+                                Reply to request
+                            </h3>
+                            <p>
+                                An email will be sent to you and the person asking for help. You can carry on with the discussion using any means you see fit.
+                            </p>
+                            <ContactForm onSubmit={onSubmit} sending={sending} />
+                        </>
+                    }
                 </div>
             </div>
     )

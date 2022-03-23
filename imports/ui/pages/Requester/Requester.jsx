@@ -22,7 +22,7 @@ export const Requester = () => {
                     <ul className="sub-nav">
                         <li>
                             <NavLink
-                                to="/requests/all-offers"
+                                to="/ask-help/all-offers"
                                 className={({ isActive }) =>
                                     cn('button', { active: isActive })
                                 }
@@ -32,7 +32,7 @@ export const Requester = () => {
                         </li>
                         <li>
                             <NavLink
-                                to='/requests/my-requests'
+                                to='/ask-help/my-requests'
                                 className={({ isActive }) =>
                                     cn('button', { active: isActive })
                                 }

@@ -49,7 +49,7 @@ export const AllServicesList = () => {
                             <ServiceItem
                                 key={service._id}
                                 {...service}
-                                linkTo={`/services/${service._id}`}
+                                linkTo={`/ask-help/offers/${service._id}`}
                             />
                         ))}
                     </ul>

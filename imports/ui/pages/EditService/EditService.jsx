@@ -27,7 +27,7 @@ export const EditService = () => {
             service: data
         }, error => {
             if (!error) {
-                navigate('/service');
+                navigate('/offer-help/my-offers');
             }
         });
     };
@@ -35,7 +35,7 @@ export const EditService = () => {
         Meteor.call('service.remove', {
             serviceId: params.serviceId
         });
-        navigate('/service');
+        navigate('/offer-help/my-offers');
     };
     
     return (
@@ -43,7 +43,7 @@ export const EditService = () => {
             <span>loading</span>
             :
             <div className="edit-service">
-                <Link to="/services/my-offers" className="back-action">
+                <Link to="/offer-help/my-offers" className="back-action">
                     ← Back
                 </Link>
                 <h1>

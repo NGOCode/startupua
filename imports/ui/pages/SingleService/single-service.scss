@@ -8,29 +8,19 @@
 
     .actions {
         background: rgba(var(--color-alt-ref), .09);
-        padding: 2rem 0;
+        padding: 2rem;
     }
 }
 
 @media only screen and (min-width: 812px) {
     .single-service {
-        & > .wrapped-content {
-            display: grid;
-            grid-template-columns: 3fr 1fr;
-            grid-column-gap: 2rem;
-        }
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        grid-column-gap: 2rem;
 
         .description {
             white-space: pre-wrap;
             word-wrap: break-word;
-        }
-
-        .actions {
-            .wrapped-content {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                padding: 0 4rem;
-            }
         }
     }
 }

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useTracker } from 'meteor/react-meteor-data';
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 
 import { ServicesCollection } from '/imports/domains/services/collection';
 
@@ -47,53 +47,50 @@ export const SingleService = () => {
             <span>loading</span>
             :
             <div className="single-service">
-                <div className="wrapped-content">
-                    <div className="service-content">
-                        <h5>
-                            {service.category}{(service.country && service.country !== 'any') ? `/ ${country.name}` : null}
-                        </h5>
-                        <h1>
-                            {service.title}
-                        </h1>
-                        <p className="description">
-                            {service.description}
-                        </p>
-                    </div>
-                    <div className="service-metadata">
-                        <ul>
-                            {service.website &&
-                            <li>
-                                {service.website}
-                            </li>
-                            }
-                            {service.country &&
-                            <li>
-                                {service.country}
-                            </li>
-                            }
-                        </ul>
-                    </div>
+                <div className="service-content">
+                    <Link to="/ask-help" className="back-action">
+                        ← Back
+                    </Link>
+                    <h5>
+                        {service.category}{(service.country && service.country !== 'any') ? `/ ${country.name}` : null}
+                    </h5>
+                    <h1>
+                        {service.title}
+                    </h1>
+                    <p className="description">
+                        {service.description}
+                    </p>
+                </div>
+                <div className="service-metadata">
+                    <ul>
+                        {service.website &&
+                        <li>
+                            {service.website}
+                        </li>
+                        }
+                        {service.country &&
+                        <li>
+                            {service.country}
+                        </li>
+                        }
+                    </ul>
                 </div>
                 <div className="actions">
-                    <div className="wrapped-content">
-                        <div>
-                            {messageSent ?
-                                <h3>
-                                    Message sent. Check your emails.
-                                </h3>
-                                :
-                                <>
-                                    <h3>
-                                        Ask for help
-                                    </h3>
-                                    <p>
-                                        An email will be sent to you and the person offering help. You can carry on with the discussion using any means you see fit.
-                                    </p>
-                                    <ContactForm onSubmit={onSubmit} sending={sending} />
-                                </>
-                            }
-                        </div>
-                    </div>
+                    {messageSent ?
+                        <h3>
+                            Message sent. Check your emails.
+                        </h3>
+                        :
+                        <>
+                            <h3>
+                                Reply to offer
+                            </h3>
+                            <p>
+                                An email will be sent to you and the person offering help. You can carry on with the discussion using any means you see fit.
+                            </p>
+                            <ContactForm onSubmit={onSubmit} sending={sending} />
+                        </>
+                    }
                 </div>
             </div>
     )

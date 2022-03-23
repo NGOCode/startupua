@@ -32,22 +32,22 @@ export const App = () => {
             <div className="page">
                 <Routes>
                     <Route path="/" element={<Home/>}/>
-                    <Route path="/services" element={<ServiceProvider/>}>
-                        <Route index element={<Navigate to="/services/all-requests" replace />} />
-                        <Route path="/services/all-requests" element={<AllRequests/>}/>
-                        <Route path="/services/:serviceId" element={<SingleService/>}/>
-                        <Route path="/services/my-offers" element={<MyServicesList/>}/>
-                        <Route path="/services/my-offers/:serviceId/edit" element={<EditService/>}/>
-                        <Route path="/services/my-offers/add" element={<AddService/>}/>
+                    <Route path="/offer-help" element={<ServiceProvider/>}>
+                        <Route index element={<Navigate to="/offer-help/all-requests" replace />} />
+                        <Route path="/offer-help/all-requests" element={<AllRequests/>}/>
+                        <Route path="/offer-help/my-offers" element={<MyServicesList/>}/>
+                        <Route path="/offer-help/my-offers/:serviceId/edit" element={<EditService/>}/>
+                        <Route path="/offer-help/my-offers/add" element={<AddService/>}/>
+                        <Route path="/offer-help/requests/:requestId" element={<SingleRequest/>}/>
                     </Route>
                     
-                    <Route path="/requests" element={<Requester/>}>
-                        <Route index element={<Navigate to="/requests/all-offers" replace />} />
-                        <Route path="/requests/all-offers" element={<AllServices/>}/>
-                        <Route path="/requests/my-requests" element={<MyRequestsList />}/>
-                        <Route path="/requests/my-requests/add" element={<AddRequest/>}/>
-                        <Route path="/requests/my-requests/:requestId/edit" element={<EditRequest/>}/>
-                        <Route path="/requests/:requestId" element={<SingleRequest/>}/>
+                    <Route path="/ask-help" element={<Requester/>}>
+                        <Route index element={<Navigate to="/ask-help/all-offers" replace />} />
+                        <Route path="/ask-help/all-offers" element={<AllServices/>}/>
+                        <Route path="/ask-help/my-requests" element={<MyRequestsList />}/>
+                        <Route path="/ask-help/my-requests/add" element={<AddRequest/>}/>
+                        <Route path="/ask-help/my-requests/:requestId/edit" element={<EditRequest/>}/>
+                        <Route path="/ask-help/offers/:serviceId" element={<SingleService/>}/>
                     </Route>
                 </Routes>
             </div>

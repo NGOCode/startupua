@@ -8,14 +8,14 @@ export const AddRequest = () => {
     const onSubmit = data => {
         Meteor.call('request.insert', data, (error, response) => {
             if (!error) {
-                navigate('/request');
+                navigate('/ask-help/my-requests');
             }
         });
     };
     
     return (
         <div className="add-request">
-            <Link to="/requests/my-requests" className="back-action">
+            <Link to="/ask-help/my-requests" className="back-action">
                 ← Back
             </Link>
             <h1>

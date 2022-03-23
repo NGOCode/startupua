@@ -19,17 +19,17 @@ export const Home = () => {
                 <div className="choose-profile">
                     <ul className="actions">
                         <li>
-                            <Link to="/request" className="button">
+                            <Link to="/ask-help" className="button">
                                 I have a request
                             </Link>
                         </li>
                         <li>
-                            <Link to="/service" className="button btn-alt">
+                            <Link to="/offer-help" className="button btn-alt">
                                 I can offer help
                             </Link>
                         </li>
                         <li className="all-offers">
-                            <Link to="/request/all-offers">
+                            <Link to="/ask-help/all-offers">
                                 See all offers
                             </Link>
                         </li>

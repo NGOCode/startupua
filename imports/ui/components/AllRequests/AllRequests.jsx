@@ -52,7 +52,7 @@ export const AllRequestsList = () => {
                             <RequestItem
                                 key={request._id}
                                 {...request}
-                                linkTo={`/requests/${request._id}`}
+                                linkTo={`/offer-help/requests/${request._id}`}
                             />
                         ))}
                     </ul>

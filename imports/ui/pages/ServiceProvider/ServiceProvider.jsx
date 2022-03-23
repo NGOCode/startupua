@@ -24,7 +24,7 @@ export const ServiceProvider = () => {
                         <ul className="sub-nav">
                             <li>
                                 <NavLink
-                                    to="/services/all-requests"
+                                    to="/offer-help/all-requests"
                                     className={({ isActive }) =>
                                         cn('button', { active: isActive })
                                     }
@@ -34,7 +34,7 @@ export const ServiceProvider = () => {
                             </li>
                             <li>
                                 <NavLink
-                                    to='/services/my-offers'
+                                    to='/offer-help/my-offers'
                                     className={({ isActive }) =>
                                         cn('button', { active: isActive })
                                     }

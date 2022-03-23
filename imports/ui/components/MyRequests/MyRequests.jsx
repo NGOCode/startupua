@@ -37,7 +37,7 @@ export const MyRequestsList = () => {
                         <RequestItem
                             key={request._id}
                             {...request}
-                            linkTo={`/requests/my-requests/${request._id}/edit`}
+                            linkTo={`/ask-help/my-requests/${request._id}/edit`}
                         />
                     ))}
                 </ul>

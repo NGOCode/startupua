@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import { truncateString } from '../../utils';
+
 import './request-item.scss';
 
 export const RequestItem = props => {
@@ -14,7 +16,7 @@ export const RequestItem = props => {
                     {props.company}
                 </span>
                 <h3 className="title">
-                    {props.title}
+                    {truncateString(props.title, 120)}
                 </h3>
                 <p className="description">
                     {props.description}

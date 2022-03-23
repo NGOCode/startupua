@@ -6,6 +6,10 @@
     .request-item {
         margin-bottom: 1rem;
 
+        .company-name {
+            color: var(--color-text-light);
+        }
+
         .description, .website {
             display: none;
         }

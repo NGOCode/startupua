@@ -4,10 +4,7 @@
     }
 
     .request-item {
-        .title {
-            margin: 1rem 0;
-            font-size: 1.2rem;
-        }
+        margin-bottom: 1rem;
 
         .description, .website {
             display: none;
@@ -20,8 +17,12 @@
         .all-requests-list {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
-            grid-column-gap: 2rem;
+            grid-column-gap: 1.2rem;
             grid-row-gap: 1rem;
+
+            li {
+                margin: 0;
+            }
         }
     }
 }

@@ -23,12 +23,12 @@ export const Header = () => {
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/service" activeClassName>
+                        <NavLink to="/services" className={({ isActive }) => cn({ active: isActive })}>
                             Offer help
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/request" activeClassName>
+                        <NavLink to="/requests" className={({ isActive }) => cn({ active: isActive })}>
                             Ask for help
                         </NavLink>
                     </li>

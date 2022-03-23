@@ -12,7 +12,7 @@ export const ServiceForm = props => {
             <fieldset>
                 <ul>
                     <li>
-                        <label htmlFor="service-contact">
+                        <label htmlFor="service-contact" className="for-required">
                             Contact details
                         </label>
                         <input
@@ -25,7 +25,7 @@ export const ServiceForm = props => {
                         />
                     </li>
                     <li>
-                        <label htmlFor="service-website">
+                        <label htmlFor="service-website" className="for-required">
                             Company website
                         </label>
                         <input
@@ -38,7 +38,7 @@ export const ServiceForm = props => {
                         />
                     </li>
                     <li>
-                        <label htmlFor="service-country">
+                        <label htmlFor="service-country" className="for-required">
                             Is your offer for a specific country?
                         </label>
                         <select
@@ -57,7 +57,7 @@ export const ServiceForm = props => {
                         </select>
                     </li>
                     <li>
-                        <label htmlFor="service-category">
+                        <label htmlFor="service-category" className="for-required">
                             Category
                         </label>
                         <select
@@ -73,7 +73,7 @@ export const ServiceForm = props => {
                         </select>
                     </li>
                     <li>
-                        <label htmlFor="service-title">
+                        <label htmlFor="service-title" className="for-required">
                             Offer title
                         </label>
                         <input
@@ -86,7 +86,7 @@ export const ServiceForm = props => {
                         />
                     </li>
                     <li>
-                        <label htmlFor="service-desc">
+                        <label htmlFor="service-desc" className="for-required">
                             Description
                         </label>
                         <textarea

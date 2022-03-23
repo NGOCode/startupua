@@ -4,6 +4,8 @@
     }
 
     .service-item {
+        margin-bottom: 1rem;
+
         .title {
             margin: 1rem 0;
             font-size: 1.2rem;
@@ -22,6 +24,10 @@
             grid-template-columns: 1fr 1fr 1fr;
             grid-column-gap: 2rem;
             grid-row-gap: 1rem;
+
+            li {
+                margin-bottom: 1rem;
+            }
         }
     }
 }

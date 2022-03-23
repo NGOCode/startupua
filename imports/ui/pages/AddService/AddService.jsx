@@ -1,5 +1,5 @@
 import React  from 'react';
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 import { ServiceForm } from '../../components/ServiceForm/ServiceForm';
 
@@ -9,15 +9,18 @@ export const AddService = () => {
     const onSubmit = data => {
         Meteor.call('service.insert', data, error => {
             if (!error) {
-                navigate('/service');
+                navigate('/services');
             }
         });
     };
     
     return (
-        <div className="add-service wrapped-content">
+        <div className="add-service">
+            <Link to="/services/my-offers" className="back-action">
+                ← Back
+            </Link>
             <h1>
-                Offer help
+                Publish help offer
             </h1>
             <div className="form-container">
                 <ServiceForm

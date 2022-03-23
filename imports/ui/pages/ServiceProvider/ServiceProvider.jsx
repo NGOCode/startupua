@@ -1,10 +1,11 @@
 import React from 'react';
+import cn from 'classnames';
 import { useTracker } from 'meteor/react-meteor-data';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import { Outlet } from "react-router-dom";
 
 import {
-    LoginForm,
-    MyServicesList
+    LoginForm
 } from '../../components';
 
 import './service-provider.scss';
@@ -18,24 +19,32 @@ export const ServiceProvider = () => {
                 <>
                     <div className="wrapped-content">
                         <h2>
-                            <span>
-                                Your services
-                            </span>
-    
-                            <Link to='add-service' className="button btn-alt">
-                                Offer help
-                            </Link>
+                            Offer Help
                         </h2>
-                        <MyServicesList />
-                    </div>
-                    <div className="actions">
-                        <div className="wrapped-content">
-                            <Link
-                                to="/service/all-needs"
-                                className="button"
-                            >
-                                Browse requests
-                            </Link>
+                        <ul className="sub-nav">
+                            <li>
+                                <NavLink
+                                    to="/services/all"
+                                    className={({ isActive }) =>
+                                        cn('button', { active: isActive })
+                                    }
+                                >
+                                    Answer requests
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink
+                                    to='/services/my-offers'
+                                    className={({ isActive }) =>
+                                        cn('button', { active: isActive })
+                                    }
+                                >
+                                    Your offers
+                                </NavLink>
+                            </li>
+                        </ul>
+                        <div className="page-content">
+                            <Outlet />
                         </div>
                     </div>
                 </>

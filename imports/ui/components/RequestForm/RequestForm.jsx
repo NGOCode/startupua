@@ -11,7 +11,7 @@ export const RequestForm = props => {
             <fieldset>
                 <ul>
                     <li>
-                        <label htmlFor="request-company">
+                        <label htmlFor="request-company" className="for-required">
                             Company name
                         </label>
                         <input
@@ -24,7 +24,7 @@ export const RequestForm = props => {
                         />
                     </li>
                     <li>
-                        <label htmlFor="request-website">
+                        <label htmlFor="request-website" className="for-required">
                             Website
                         </label>
                         <input
@@ -38,7 +38,7 @@ export const RequestForm = props => {
                         />
                     </li>
                     <li>
-                        <label htmlFor="service-contact">
+                        <label htmlFor="service-contact" className="for-required">
                             Contact details
                         </label>
                         <input
@@ -70,7 +70,7 @@ export const RequestForm = props => {
                         </select>
                     </li>
                     <li>
-                        <label htmlFor="request-category">
+                        <label htmlFor="request-category" className="for-required">
                             Category
                         </label>
                         <select
@@ -86,7 +86,7 @@ export const RequestForm = props => {
                         </select>
                     </li>
                     <li>
-                        <label htmlFor="request-title">
+                        <label htmlFor="request-title" className="for-required">
                             Request title
                         </label>
                         <input
@@ -100,7 +100,7 @@ export const RequestForm = props => {
                         />
                     </li>
                     <li>
-                        <label htmlFor="request-desc">
+                        <label htmlFor="request-desc" className="for-required">
                             Description
                         </label>
                         <textarea

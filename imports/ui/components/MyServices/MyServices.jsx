@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTracker } from 'meteor/react-meteor-data';
+import { Link } from 'react-router-dom';
 
 import { ServicesCollection } from '/imports/domains/services/collection';
 import { ServiceItem } from '../ServiceItem/ServiceItem';
@@ -23,11 +24,19 @@ export const MyServicesList = () => {
                 </span>
                 :
                 <ul className="my-services-list">
+                    <li className="request-item add-placeholder">
+                        <Link
+                            to="add"
+                            className="button btn-alt"
+                        >
+                            Publish new offer
+                        </Link>
+                    </li>
                     {services.map(service => (
                         <ServiceItem
                             key={service._id}
                             {...service}
-                            linkTo={`/services/${service._id}/edit`}
+                            linkTo={`/services/my-offers/${service._id}/edit`}
                         />
                     ))}
                 </ul>

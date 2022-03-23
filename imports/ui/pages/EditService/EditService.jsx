@@ -1,5 +1,5 @@
 import React  from 'react';
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { useTracker } from 'meteor/react-meteor-data';
 import { useParams } from "react-router-dom";
 
@@ -42,7 +42,10 @@ export const EditService = () => {
         loading ?
             <span>loading</span>
             :
-            <div className="edit-service wrapped-content">
+            <div className="edit-service">
+                <Link to="/services/my-offers" className="back-action">
+                    ← Back
+                </Link>
                 <h1>
                     Edit your offer
                 </h1>

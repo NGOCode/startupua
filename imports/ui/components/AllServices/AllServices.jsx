@@ -24,7 +24,7 @@ export const AllServicesList = () => {
             query.category = categoryFilter;
         }
         
-        const services = ServicesCollection.find(query).fetch();
+        const services = ServicesCollection.find(query, { sort: { createdAt: -1 }}).fetch();
         
         return {
             loading: !handler.ready(),

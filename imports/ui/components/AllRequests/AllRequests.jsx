@@ -27,7 +27,7 @@ export const AllRequestsList = () => {
             query.category = categoryFilter;
         }
         
-        const requests = RequestsCollection.find(query).fetch();
+        const requests = RequestsCollection.find(query, { sort: { createdAt: -1 }}).fetch();
         
         return {
             loading: !handler.ready(),

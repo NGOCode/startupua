@@ -23,23 +23,23 @@ export const MyServicesList = () => {
                     Loading
                 </span>
                 :
-                <ul className="my-services-list">
-                    <li className="request-item add-placeholder">
-                        <Link
-                            to="add"
-                            className="button btn-alt"
-                        >
-                            Publish new offer
-                        </Link>
-                    </li>
-                    {services.map(service => (
-                        <ServiceItem
-                            key={service._id}
-                            {...service}
-                            linkTo={`/offer-help/my-offers/${service._id}/edit`}
-                        />
-                    ))}
-                </ul>
+                <>
+                    <Link
+                        to="add"
+                        className="button btn-alt btn-new-item"
+                    >
+                        Publish new offer
+                    </Link>
+                    <ul className="my-services-list">
+                        {services.map(service => (
+                            <ServiceItem
+                                key={service._id}
+                                {...service}
+                                linkTo={`/offer-help/my-offers/${service._id}/edit`}
+                            />
+                        ))}
+                    </ul>
+                </>
             }
         </div>
     );

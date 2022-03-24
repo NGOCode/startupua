@@ -24,23 +24,23 @@ export const MyRequestsList = () => {
                     Loading
                 </span>
                 :
-                <ul className="my-requests-list">
-                    <li className="request-item add-placeholder">
-                        <Link
-                            to="add"
-                            className="button"
-                        >
-                            Publish new request
-                        </Link>
-                    </li>
-                    {requests.map(request => (
-                        <RequestItem
-                            key={request._id}
-                            {...request}
-                            linkTo={`/ask-help/my-requests/${request._id}/edit`}
-                        />
-                    ))}
-                </ul>
+                <>
+                    <Link
+                        to="add"
+                        className="button btn-new-item"
+                    >
+                        Publish new request
+                    </Link>
+                    <ul className="my-requests-list">
+                        {requests.map(request => (
+                            <RequestItem
+                                key={request._id}
+                                {...request}
+                                linkTo={`/ask-help/my-requests/${request._id}/edit`}
+                            />
+                        ))}
+                    </ul>
+                </>
             }
         </div>
     );

@@ -34,19 +34,6 @@
     }
 }
 
-.add-placeholder {
-    & > a {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        &:after {
-            content: '+';
-            margin-left: 1rem;
-        }
-    }
-}
-
 @media only screen and (min-width: 812px) {
     .cards-list {
         width: auto;

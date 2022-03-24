@@ -8,7 +8,7 @@ import './request-item.scss';
 export const RequestItem = props => {
     return (
         <li className="request-item">
-            <Link to={props.linkTo}>
+            <Link to={props.linkTo} className="item-link">
                 <span className="category">
                     {props.category}
                 </span>

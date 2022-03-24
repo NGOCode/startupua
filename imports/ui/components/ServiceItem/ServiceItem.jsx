@@ -7,7 +7,7 @@ import './service-item.scss';
 
 export const ServiceItem = props => {
     return (
-        <li className="service-item">
+        <li className="card-item service-item">
             <Link to={props.linkTo} className="item-link">
                 <span className="category">
                     {props.category}

@@ -46,14 +46,14 @@ export const SingleService = () => {
         loading ?
             <span>loading</span>
             :
-            <div className="single-service">
+            <div className="single-item single-service">
                 <div className="service-content">
                     <Link to="/ask-help" className="back-action">
                         ← Back
                     </Link>
-                    <h5>
-                        {service.category}{(service.country && service.country !== 'any') ? `/ ${country.name}` : null}
-                    </h5>
+                    <span className="category">
+                        {service.category}
+                    </span>
                     <h1>
                         {service.title}
                     </h1>
@@ -61,16 +61,22 @@ export const SingleService = () => {
                         {service.description}
                     </p>
                 </div>
-                <div className="service-metadata">
+                <div className="metadata">
                     <ul>
-                        {service.website &&
-                        <li>
-                            {service.website}
+                        {(service.country && service.country !== 'any') &&
+                        <li className="country">
+                            <h4>
+                                Country
+                            </h4>
+                            {country.name}
                         </li>
                         }
-                        {service.country &&
+                        {service.website &&
                         <li>
-                            {service.country}
+                            <h4>
+                                Website
+                            </h4>
+                            {service.website}
                         </li>
                         }
                     </ul>

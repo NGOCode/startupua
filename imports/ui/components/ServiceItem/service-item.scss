@@ -1,4 +1,4 @@
-.service-item, .request-item {
+.card-item {
     list-style: none;
     display: flex;
     justify-content: stretch;
@@ -37,11 +37,13 @@
             }
         }
 
-
+        &:hover {
+            background: var(--color-alt);
+        }
     }
 }
 
-.service-item {
+.card-item.service-item {
     a {
         .company-name, .website {
             font-size: 0.9rem;

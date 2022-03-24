@@ -1,7 +1,16 @@
-.request-item {
+.card-item.request-item {
     .item-link {
         .company-name, .website {
             font-size: 0.9rem;
+        }
+
+        &:hover {
+            background: var(--color-primary);
+            color: white;
+
+            .company-name {
+                color: white;
+            }
         }
     }
 }

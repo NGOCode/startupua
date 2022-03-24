@@ -48,14 +48,21 @@ export const SingleRequest = () => {
         loading ?
             <span>loading</span>
             :
-            <div className="single-request">
+            <div className="single-item single-request">
                 <div className="request-content">
                     <Link to="/offer-help" className="back-action">
                         ← Back
                     </Link>
-                    <h5>
-                        {request.category}{(request.country && request.country !== 'any') ? `/ ${country.name}` : null}
-                    </h5>
+                    <div>
+                        <span className="category">
+                            {request.category}
+                        </span>
+                        {(request.country && request.country !== 'any') &&
+                        <span className="country">
+                            {country.name}
+                        </span>
+                        }
+                    </div>
                     <h1>
                         {request.title}
                     </h1>
@@ -63,7 +70,7 @@ export const SingleRequest = () => {
                         {request.description}
                     </p>
                 </div>
-                <div className="request-metadata">
+                <div className="metadata">
                     <OpenGraphReader url={request.website} />
                     {request.company &&
                     <h4>

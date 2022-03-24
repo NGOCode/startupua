@@ -1,19 +1,44 @@
 
-.single-service {
+.single-item {
+    h1 {
+        margin-top: .5rem;
+    }
+
+    .category {
+        background: var(--color-bg-label);
+        padding: .25rem .5rem;
+        font-size: .8rem;
+        border-radius: var(--radius);
+    }
+
     .og-reader {
         img {
             max-width: 100%;
         }
     }
 
+    .metadata ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+            margin-bottom: 2rem;
+        }
+
+        h4 {
+            margin-bottom: .5rem;
+        }
+    }
+
     .actions {
         background: rgba(var(--color-alt-ref), .09);
         padding: 2rem;
+        border-radius: var(--radius);
     }
 }
 
 @media only screen and (min-width: 812px) {
-    .single-service {
+    .single-item {
         display: grid;
         grid-template-columns: 3fr 1fr;
         grid-column-gap: 2rem;

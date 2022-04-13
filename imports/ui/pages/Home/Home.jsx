@@ -60,6 +60,14 @@ export const Home = () => {
                         </p>
                     </li>
                 </ul>
+                <a
+                    className="ph-link"
+                    href="https://www.producthunt.com/posts/ua-founders?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-ua&#0045;founders" target="_blank">
+                    <img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=341146&theme=light" alt="UA&#0032;Founders - Supporting&#0032;and&#0032;connecting&#0032;with&#0032;Ukrainian&#0032;entrepreneurs | Product Hunt"
+                       style={{width: '200', height: '43.2px'}}
+                       width="200"
+                       height="43.2" />
+                </a>
             </div>
         </div>
     )

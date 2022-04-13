@@ -75,6 +75,12 @@
                 }
             }
         }
+
+        .ph-link {
+            display: block;
+            padding: 1rem;
+            text-align: center;
+        }
     }
 }
 
@@ -146,6 +152,11 @@
             justify-content: center;
             padding: 4rem;
             min-height: calc(100vh - 8rem);
+            flex-wrap: wrap;
+
+            .ph-link {
+                flex: 1 1 auto;
+            }
         }
     }
 }

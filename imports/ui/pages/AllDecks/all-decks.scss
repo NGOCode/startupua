@@ -1,0 +1,32 @@
+.all-decks {
+    .all-decks-list {
+        padding: 0;
+    }
+
+    .request-item {
+        margin-bottom: 1rem;
+
+        .company-name {
+            color: var(--color-text-light);
+        }
+
+        .description, .website {
+            display: none;
+        }
+    }
+}
+
+@media only screen and (min-width: 812px) {
+    .all-decks {
+        .all-decks-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-column-gap: 1.2rem;
+            grid-row-gap: 1rem;
+
+            li {
+                margin: 0;
+            }
+        }
+    }
+}

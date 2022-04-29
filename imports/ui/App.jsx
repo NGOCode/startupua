@@ -14,7 +14,10 @@ import {
     SingleService,
     SingleRequest,
     EditRequest,
-    EditService
+    EditService,
+    Fundraising,
+    AllDecks,
+    SingleDeck
 } from './pages';
 
 import {
@@ -39,6 +42,13 @@ export const App = () => {
                         <Route path="/offer-help/my-offers/:serviceId/edit" element={<EditService/>}/>
                         <Route path="/offer-help/my-offers/add" element={<AddService/>}/>
                         <Route path="/offer-help/requests/:requestId" element={<SingleRequest/>}/>
+                        <Route path="/offer-help/requests/:requestId" element={<SingleRequest/>}/>
+                    </Route>
+    
+                    <Route path="/fundraising" element={<Fundraising/>}>
+                        <Route index element={<Navigate to="/fundraising/all-decks" replace />} />
+                        <Route path="/fundraising/all-decks" element={<AllDecks />}/>
+                        <Route path="/fundraising/decks/:deckId" element={<SingleDeck />}/>
                     </Route>
                     
                     <Route path="/ask-help" element={<Requester/>}>

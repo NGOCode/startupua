@@ -100,3 +100,32 @@ new ValidatedMethod({
         });
     }
 });
+
+
+new ValidatedMethod({
+    name: 'request.teamContact',
+    validate: new SimpleSchema({
+        requestId: { type: String },
+        name: { type: String },
+        companyName: { type: String }
+    }).validator({ clean: true }),
+    async run({ requestId, message }) {
+        const request = RequestsCollection.findOne({ _id: requestId });
+        
+        if (!this.userId || request.solved) {
+            throw new Meteor.Error('Not authorized.');
+        }
+        
+        const sender = Meteor.user();
+        const senderEmail = sender.services.google ? sender.services.google.email : sender.emails[0].address;
+        const recipientEmail = ['benoit.gilloz@gmail.com', 'kevin@spitche.com'];
+        
+        Email.send({
+            to: recipientEmail,
+            from: 'noreply@uafounders.org',
+            replyTo: senderEmail,
+            subject: 'Help is coming',
+            text: message
+        });
+    }
+});

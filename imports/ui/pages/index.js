@@ -9,6 +9,9 @@ import { AllRequests } from './AllRequests/AllRequests';
 import { SingleService } from './SingleService/SingleService.jsx';
 import { EditRequest } from './EditRequest/EditRequest';
 import { EditService } from './EditService/EditService';
+import { Fundraising } from './Fundraising/Fundraising';
+import { AllDecks } from './AllDecks/AllDecks';
+import { SingleDeck } from './SingleDeck/SingleDeck';
 
 export {
     Home,
@@ -21,5 +24,8 @@ export {
     AllRequests,
     SingleRequest,
     EditRequest,
-    EditService
+    EditService,
+    Fundraising,
+    AllDecks,
+    SingleDeck
 }

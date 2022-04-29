@@ -1,0 +1,19 @@
+.fundraising {
+    h2 {
+        .button {
+            margin-left: 2rem;
+            font-size: 1rem;
+        }
+    }
+}
+
+@media only screen and (min-width: 812px) {
+    .fundraising {
+        .page-content {
+            border-radius: var(--radius);
+            background: white;
+            padding: 2rem;
+        }
+
+    }
+}

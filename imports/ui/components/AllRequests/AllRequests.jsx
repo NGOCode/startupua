@@ -20,7 +20,8 @@ export const AllRequestsList = () => {
     const { loading, requests } = useTracker(() => {
         const handler = Meteor.subscribe('allRequests');
         const query = {
-            solved: false
+            solved: false,
+            category: { $ne: 'Fundraising' }
         };
         
         if (categoryFilter) {

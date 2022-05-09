@@ -8,7 +8,7 @@ import './categories-filter.scss';
 export const CategoriesFilter = props => {
     return (
         <ul className="categories-filter">
-            {categories.map(category => (
+            {categories.filter(cat => cat !== 'Fundraising').map(category => (
                 <li key={category}>
                     <button
                         type="button"

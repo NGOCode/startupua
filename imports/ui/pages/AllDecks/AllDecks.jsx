@@ -30,6 +30,11 @@ export const AllDecks = () => {
             </span>
             :
             <div className="all-decks">
+                <p>
+                    UA Founders is trying to actively help UA Startups looking for funding by acting as intermediary between
+                    founders and our network of investors. You can request decks and more info from us about the projects below
+                    and we will also put you in touch directly with the founders if requested. We are not charging anything for this.
+                </p>
                 {requests && requests.length > 0 ?
                     <ul className="all-decks-list">
                         {requests.map(request => (

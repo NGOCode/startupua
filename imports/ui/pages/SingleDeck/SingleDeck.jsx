@@ -30,11 +30,14 @@ export const SingleDeck = () => {
         
         if (!messageSent) {
             Meteor.call('request.teamContact', {
-                requestId: params.requestId,
-                message: data.message
+                requestId: params.deckId,
+                contactName: data.contactName,
+                companyName: data.companyName
             }, error => {
                 if (!error) {
                     setMessageSent(true);
+                } else {
+                    console.log(error)
                 }
     
                 setSending(false);

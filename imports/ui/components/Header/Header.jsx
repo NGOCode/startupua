@@ -11,6 +11,9 @@ export const Header = () => {
                 <figure className="logo">
                     <img src="/logo.png"/>
                 </figure>
+                <figure className="logo-mobile">
+                    <img src="/logo-square.png"/>
+                </figure>
                 <span className="brand-name">
                     UA Founders
                 </span>
@@ -30,6 +33,11 @@ export const Header = () => {
                     <li>
                         <NavLink to="/ask-help" className={({ isActive }) => cn({ active: isActive })}>
                             Ask for help
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/fundraising" className={({ isActive }) => cn({ active: isActive })}>
+                            Fundraising
                         </NavLink>
                     </li>
                 </ul>

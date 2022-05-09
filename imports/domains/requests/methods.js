@@ -106,10 +106,10 @@ new ValidatedMethod({
     name: 'request.teamContact',
     validate: new SimpleSchema({
         requestId: { type: String },
-        name: { type: String },
+        contactName: { type: String },
         companyName: { type: String }
     }).validator({ clean: true }),
-    async run({ requestId, message }) {
+    async run({ requestId, contactName, companyName }) {
         const request = RequestsCollection.findOne({ _id: requestId });
         
         if (!this.userId || request.solved) {
@@ -124,8 +124,8 @@ new ValidatedMethod({
             to: recipientEmail,
             from: 'noreply@uafounders.org',
             replyTo: senderEmail,
-            subject: 'Help is coming',
-            text: message
+            subject: 'Deck request',
+            text: `Deck request from ${contactName} of Company or Fund ${companyName} for startup ${request.company} (${request.contact} / ${request.website})`
         });
     }
 });

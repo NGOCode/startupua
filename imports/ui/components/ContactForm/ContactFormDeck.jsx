@@ -9,19 +9,19 @@ export const ContactFormDeck = props => {
             <fieldset>
                 <ul>
                     <li>
-                        <label htmlFor="message">
+                        <label htmlFor="contactName">
                             Your full name
                         </label>
                         <input
                             type="text"
-                            id="name"
+                            id="contactName"
                             required
-                            {...register('name')}
+                            {...register('contactName')}
                         />
                     </li>
                     <li>
-                        <label htmlFor="message">
-                            Your company or fund
+                        <label htmlFor="companyName">
+                            Your company or fund's name
                         </label>
                         <input
                             type="text"
